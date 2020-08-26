@@ -1,0 +1,1885 @@
+/*
+Theme Name:日本一庶民派のWeb制作会社 Ver.0.9
+Theme URI:ver-nine.com
+Description:日本一庶民派のWeb制作会社
+Version:0.9
+Author:Yuki Yokochi
+Author URI:yokochi.tokyo
+
+*/
+
+
+// カラーの定義
+
+$Acol:#4a3a3a;
+$Bcol:#043314;
+$Button:#F8B869;
+$L-1:#fdfdfd;
+$L-2:#f4f4f4;
+$W:#ffffff;
+$B:#000000;
+$Gray1:#F2F2F2;
+$Gray2:#FAFAFA;
+
+// テキストの統一
+
+p,
+h1,
+h2,
+h3,
+h4,
+a{
+  font-family: sans-serif;
+  font-weight:normal;
+  color:$Acol;
+}
+// font-family: 'Noto Serif JP', serif;
+
+
+// その他共通要素
+
+a{
+  cursor:pointer;
+}
+
+.container{
+  width:90%;
+  margin:0 auto;
+  padding:50px 0;
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    padding:80px 0;
+    width:80%;
+  }
+}
+
+.button{
+  margin:50px auto 0;
+  width:140px;
+  height:34px;
+  background-color:$Button;
+  border-radius: 17px;
+  display:block;
+
+  @media screen and (min-width:768px){
+    width:200px;
+    height:50px;
+    border-radius: 25px;
+    margin:80px auto 0;
+  }
+  .button-text{
+    color:$W;
+    line-height:34px;
+    text-align:center;
+    font-size:16px;
+    display:block;
+    text-decoration: none;
+    @media screen and (min-width:768px){
+      font-size:20px;
+      line-height:50px;
+    }
+  }
+}
+
+// メニューボタン
+
+.menu{
+  width:60px;
+  height:60px;
+  background-color:$W;
+  display:none;
+  top:21px;
+  right:5%;
+  z-index:101;
+  position:fixed;
+  @media screen and (min-width:768px){
+    top:45px;
+  }
+  @media screen and (min-width:1025px){
+    top:80px;
+    right:10%;
+  }
+  .menu-button{
+    position:relative;
+    width:44px;
+    height:32px;
+    display:inline-block;
+    margin:13px 9px;
+    transition: all .4s;
+    box-sizing: border-box;
+    span{
+      position:absolute;
+      left:0;
+      width:100%;
+      height:2px;
+      background-color:$Acol;
+      transition: all .4s;
+      box-sizing: border-box;
+      display:inline-block;
+      &:nth-of-type(1) {
+        top: 0;
+      }
+      &:nth-of-type(2) {
+        top: 15px;
+      }
+      &:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+  }
+  .menu-button.active span:nth-of-type(1) {
+    -webkit-transform: translateY(15px) rotate(-315deg);
+    transform: translateY(15px) rotate(-315deg);
+  }
+  .menu-button.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu-button.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-15px) rotate(315deg);
+    transform: translateY(-15px) rotate(315deg);
+  }
+}
+
+// メニュークリック時
+
+.menu-after{
+  background-color:$B;
+  width:100vw;
+  height:100vh;
+  transition:0.4s;
+  position:fixed;
+  display:none;
+  z-index:100;
+  opacity:0.8;
+  top:0;
+  a{
+    text-align:center;
+    display:block;
+    font-size:16px;
+    color:$W;
+    margin:0 0 50px;
+    text-decoration: none;
+    &:nth-of-type(1) {
+      margin:20vh 0 50px 0;
+      @media screen and (min-width:768px){
+        margin:20vh 0 80px 0;
+      }
+      @media screen and (min-width:1025px){
+        margin:25vh 0 50px 0;
+      }
+    }
+    @media screen and (min-width:768px){
+        font-size:18px;
+        margin:0 0 80px;
+    }
+    @media screen and (min-width:1025px){
+        font-size:24px;
+        margin:0 0 50px;
+    }
+  }
+}
+
+
+.breadcrumbs{
+  color:$W;
+  font-size:10px;
+  position:absolute;
+  top:131px;
+  right:5%;
+  @media screen and (min-width:768px){
+    top:185px;
+  }
+  @media screen and (min-width:1025px){
+    top:220px;
+    right:10%;
+  }
+  a{
+    color:$W;
+  }
+}
+
+
+// ここからトップページのスタイリング
+
+.vision{
+  z-index:-99;
+  width:100%;
+  height:100vh;
+  background-image:url("img-for-top/top-eye.jpg");
+  background-size:cover;
+  background-position:center;
+  position:fixed;
+  p,
+  h1,
+  h2,
+  h3{
+    color:$W;
+  }
+  .title{
+    position:absolute;
+    top:366px;
+    left:5%;
+    @media screen and (max-width:361px){
+      top:240px;
+    }
+    @media screen and (min-width:768px){
+      top:450px;
+    }
+    @media screen and (min-width:1025px){
+      top:400px;
+      left:10%;
+    }
+    h1{
+      font-size:100px;
+      font-family: 'Poiret One', cursive;
+      @media screen and (max-width:349px){
+        font-size:80px;
+      }
+      @media screen and (min-width:768px){
+        font-size:170px;
+      }
+    }
+    .for-readable{
+      text-align:center;
+      font-family:sans-serif;
+      @media screen and (min-width:768px){
+        font-size:24px;
+      }
+    }
+  }
+  .subtitle{
+    font-size:24px;
+    line-height:48px;
+    position:absolute;
+    top:240px;
+    left:5%;
+    opacity:1.0;
+    @media screen and (max-width:361px){
+      top:140px;
+    }
+    @media screen and (min-width:768px){
+      font-size:40px;
+      line-height:90px;
+    }
+    @media screen and (min-width:1025px){
+      top:200px;
+      left:10%;
+
+    }
+  }
+  .vision-title{
+    position:absolute;
+    top:176px;
+    left:5%;
+    width:0%;
+    overflow: hidden;
+    @media screen and (max-width:361px){
+      top:90px;
+    }
+    @media screen and (min-width:768px){
+      top:140px;
+    }
+    @media screen and (min-width:1025px){
+      top:80px;
+      left:10%;
+    }
+    h3{
+      font-size:25px;
+      line-height:30px;
+      @media screen and (min-width:768px){
+        font-size:45px;
+        line-height:50px;
+      }
+    }
+    .underline{
+      height:1px;
+      background-color:$W;
+    }
+  }
+  .vision-p1,
+  .vision-p2{
+    display:none;
+    font-size:16px;
+    line-height:32px;
+    position:absolute;
+    top:366px;
+    left:5%;
+    @media screen and (max-width:361px){
+      top:240px;
+    }
+    @media screen and (min-width:768px){
+      top:465px;
+      font-size:24px;
+      line-height:50px;
+    }
+    @media screen and (min-width:1025px){
+      top:200px;
+      left:calc(90% - 1000px);
+      width:1000px;
+      text-align:right;
+    }
+  }
+  .make-scroll{
+    font-size:16px;
+    text-align:center;
+    position:absolute;
+    bottom:50px;
+    width:100%;
+    opacity:0;
+    @media screen and (min-width:768px){
+      font-size:24px;
+      bottom:80px;
+
+    }
+  }
+}
+
+.blog{
+  height:100vh;
+  width:100vw;
+  position:fixed;
+  top:0;
+  display:none;
+  h3{
+    color:$W;
+    font-size:25px;
+    width:90%;
+    margin:0 auto;
+    padding:50px 0 0;
+    @media screen and (min-width:768px){
+      font-size:45px;
+    }
+    @media screen and (min-width:1025px){
+      width:80%;
+      padding:80px 0 0;
+
+    }
+  }
+  .underline{
+    background-color:$W;
+    width:90%;
+    height:1px;
+    margin:5px auto 30px;
+    @media screen and (min-width:375px){
+      margin:5px auto 50px;
+    }
+    @media screen and (min-width:1025px){
+      margin:5px auto 50px;
+      width:80%;
+    }
+  }
+  @mixin loop_css{
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    width: 100vw;
+    overflow: hidden;
+    height:19vh;
+    margin:9px 0 0 0;
+  }
+  @mixin loop_css_ul{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  @mixin loop_css_ul_f($loopNo){
+    -webkit-animation: $loopNo 50s -25s linear infinite;
+    animation: $loopNo 50s -25s linear infinite;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+  @mixin loop_css_ul_sum($loopNo){
+    -webkit-animation: $loopNo 50s  linear infinite;
+    animation: $loopNo 50s linear infinite;
+  }
+  @mixin loop_css_ul_li{
+    display: inline-block;
+    width: calc(100vw / 2);
+    min-width: 150px;
+    list-style: none;
+    text-align: center;
+    margin:0 9px 0 0;
+  }
+  @mixin loop_css_ul_img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @mixin loop_css_ul_a{
+    display: block;
+    transition:0.2s;
+  }
+  @mixin loop_css_ul_a_hov{
+    opacity: .7;
+    transition:0.2s
+  }
+  @mixin loop_css_ul_bg{
+    position:absolute;
+    background-color:#fff;
+    opacity:0.8;
+    width:100%;
+    bottom:0px;
+    height:40px;
+    @media screen and (min-width:768px){
+      height:60px;
+    }
+    p{
+      line-height:20px;
+      font-size:12px;
+      width:90%;
+      margin:0 auto;
+      text-align:left;
+      @media screen and (min-width:768px){
+        font-size:16px;
+        line-height:26px;
+
+      }
+    }
+  }
+  .loop_css1 {
+    @include loop_css;
+    width:300vw;
+    height:15vh;
+    @media screen and (min-width:360px){
+      height:16vh;
+    }
+    @media screen and (min-width:375px){
+      width:300vw;
+      height:16vh;
+    }
+    @media screen and (min-width:768px){
+      width:130vw;
+      height:17vh;
+    }
+    @media screen and (min-width:1025px){
+      width:100vw;
+      height:20vh;
+    }
+    ul{
+      @include loop_css_ul;
+      &:first-child{
+        @include loop_css_ul_f(loop);
+      }
+      li{
+        @include loop_css_ul_li;
+        a{
+          @include loop_css_ul_a;
+          position:relative;
+          &:hover{
+            @include loop_css_ul_a_hov;
+          }
+        }
+        source,
+        img{
+          @include loop_css_ul_img;
+        }
+        .blog-background{
+          @include loop_css_ul_bg;
+        }
+      }
+      .large-on{
+        display:none;
+        @media screen and (min-width:1025px){
+          display:block;
+        }
+      }
+    }
+    ul + ul {
+      @include loop_css_ul_sum(loop2);
+    }
+  }
+  .loop_css2{
+    @include loop_css;
+    width:300vw;
+    height:15vh;
+    @media screen and (min-width:360px){
+      height:16vh;
+    }
+    @media screen and (min-width:375px){
+      width:300vw;
+      height:16vh;
+    }
+    @media screen and (min-width:768px){
+      width:130vw;
+      height:17vh;
+    }
+    @media screen and (min-width:1025px){
+      width:100vw;
+      height:20vh;
+    }
+    // @media screen and (max-width:1024px){
+    //     width:130vw;
+    //     height:18vh;
+    // }
+    // @media screen and (max-width:769px){
+    //     width:130vw;
+    //     height:16vh;
+    // }
+    // @media screen and (max-width:600px){
+    //     width:200vw;
+    //     height:18vh;
+    // }
+    // @media screen and (max-width:492px){
+    //     width:300vw;
+    //     height:18vh;
+    // }
+    // @media screen and (max-width:415px){
+    //     width:300vw;
+    //     height:16vh;
+    // }
+    // @media screen and (max-width:376px){
+    //     width:300vw;
+    //     height:16vh;
+    // }
+    // @media screen and (max-width:361px){
+    //     width:300vw;
+    //     height:18vh;
+    // }
+    // @media screen and (max-width:321px){
+    //     width:300vw;
+    //     height:16vh;
+    // }
+    ul{
+      @include loop_css_ul;
+      &:first-child{
+        @include loop_css_ul_f(loop3);
+      }
+      li{
+        @include loop_css_ul_li;
+        a{
+          @include loop_css_ul_a;
+          position:relative;
+          &:hover{
+            @include loop_css_ul_a_hov;
+          }
+        }
+        source,
+        img{
+         @include loop_css_ul_img;
+        }
+        .blog-background{
+          @include loop_css_ul_bg;
+        }
+      }
+      .large-on{
+        display:none;
+        @media screen and (min-width:1025px){
+          display:block;
+        }
+      }
+    }
+    ul + ul {
+      @include loop_css_ul_sum(loop4);
+    }
+  }
+  .loop_css1:hover ul {
+    animation-play-state: paused;
+  }
+  .loop_css2:hover ul {
+    animation-play-state: paused;
+  }
+  @mixin loop_flame($value){
+    -webkit-transform: translateX($value);
+    -ms-transform: translateX($value);
+    transform: translateX($value);
+  }
+  @-webkit-keyframes loop {
+    0% {
+      @include loop_flame(100%);
+    }
+    to {
+      @include loop_flame(-100%);
+    }
+  }
+  @keyframes loop {
+    0% {
+      @include loop_flame(100%);
+    }
+    to {
+      @include loop_flame(-100%);
+    }
+  }
+  @-webkit-keyframes loop2 {
+    0% {
+      @include loop_flame(0);
+    }
+    to {
+      @include loop_flame(-200%);
+    }
+  }
+  @keyframes loop2 {
+    0% {
+      @include loop_flame(0);
+    }
+    to {
+      @include loop_flame(-200%);
+    }
+  }
+  @-webkit-keyframes loop3 {
+    0% {
+      @include loop_flame(-100%);
+    }
+    to {
+      @include loop_flame(100%);
+    }
+  }
+  @keyframes loop3 {
+    0% {
+      @include loop_flame(-100%);
+    }
+    to {
+      @include loop_flame(100%);
+    }
+  }
+  @-webkit-keyframes loop4 {
+    0% {
+      @include loop_flame(-200%);
+    }
+    to {
+      @include loop_flame(0);
+    }
+  }
+  @keyframes loop4 {
+    0% {
+      @include loop_flame(-200%);
+    }
+    to {
+      @include loop_flame(0);
+    }
+  }
+  .large-off{
+    @media screen and (min-width:1025px){
+      display:none;
+    }
+  }
+  .button{
+    margin:30px auto 0;
+    @media screen and (min-width:768px){
+      margin:50px auto 0;
+    }
+    @media screen and (min-width:1025px){
+      width:200px;
+      height:50px;
+      border-radius: 25px;
+      margin:30px auto 0;
+    }
+    .button-text{
+      @media screen and (min-width:1025px){
+        font-size:20px;
+        line-height:50px;
+      }
+    }
+  }
+}
+
+
+.empty-element{
+  position:relative;
+  width:100%;
+}
+
+.under-element{
+  position:absolute;
+  top:115vh;
+  width:100%;
+  padding-bottom:100vh;
+}
+
+.z-indexful{
+  width:100%;
+  position:absolute;
+  top:calc(1500px + 100vh);
+  }
+  .service{
+    width:100%;
+    background-color:$W;
+    h3{
+      font-size:25px;
+      line-height:30px;
+      @media screen and (min-width:768px){
+        font-size:45px;
+        line-height:50px;
+      }
+    }
+    .underline{
+      width:100%;
+      height:1px;
+      background-color:$Acol;
+    }
+    .service-desc{
+      font-size:16px;
+      line-height:26px;
+      margin:50px 0 21px;
+      @media screen and (max-width:349px){
+        font-size:14px;
+      }
+      @media screen and (min-width:768px){
+        font-size:24px;
+        line-height:40px;
+        margin:80px 0 45px;
+      }
+    }
+    .service-display{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      .service-each{
+        width:48%;
+        height:136px;
+        background-size:cover;
+        background-position:center;
+        position:relative;
+        @media screen and (min-width:768px){
+          height:300px;
+          width:49%;
+        }
+        .service-each-backgoround{
+          background-color:$W;
+          width:100%;
+          height:50px;
+          position:absolute;
+          bottom:0;
+          opacity:0.8;
+          @media screen and (min-width:768px){
+            height:80px;
+          }
+          p{
+            font-size:16px;
+            line-height:50px;
+            text-align:center;
+            @media screen and (min-width:768px){
+              font-size:24px;
+              line-height:80px;
+            }
+          }
+        }
+      }
+      .service1{
+        background-image:url("img-for-top/service1.jpg");
+        margin:0px 0 21px;
+        @media screen and (min-width:768px){
+          margin:0px 0 45px;
+        }
+      }
+      .service2{
+        background-image:url("img-for-top/service2.jpg");
+        margin:0px 0 21px;
+        @media screen and (min-width:768px){
+          margin:0px 0 45px;
+        }
+      }
+      .service3{
+        background-image:url("img-for-top/service3.jpg");
+      }
+      .service4{
+        background-image:url("img-for-top/service4.jpg");
+      }
+      .service5{
+        background-image:url("img-for-top/service5.jpg");
+      }
+      .service6{
+        background-image:url("img-for-top/service6.jpg");
+      }
+    }
+  }
+
+  .about{
+    background-color:$W;
+    h3{
+      font-size:25px;
+      line-height:30px;
+      @media screen and (min-width:768px){
+        font-size:45px;
+        line-height:50px;
+      }
+    }
+    .underline{
+      width:100%;
+      height:1px;
+      background-color:$Acol;
+    }
+    .about-desc-top{
+      margin:50px 0 0;
+      @media screen and (min-width:768px){
+        margin:80px 0 0;
+      }
+    }
+    .about-desc1{
+      background-color:$Gray1;
+      width:100%;
+      height:40px;
+      @media screen and (min-width:768px){
+        height:52px;
+      }
+      p{
+        font-size:14px;
+        line-height:40px;
+        width:90%;
+        margin:0 auto;
+        @media screen and (min-width:768px){
+          font-size:16px;
+          line-height:52px;
+        }
+      }
+    }
+    .about-desc2{
+      background-color:$Gray2;
+      width:100%;
+      height:40px;
+      @media screen and (min-width:768px){
+        height:52px;
+      }
+      p{
+        font-size:14px;
+        line-height:40px;
+        width:90%;
+        margin:0 auto;
+        @media screen and (min-width:768px){
+          font-size:16px;
+          line-height:52px;
+        }
+      }
+    }
+    .about-desc-bottom{
+      height:80px;
+      @media screen and (min-width:768px){
+        height:52px;
+      }
+    }
+  }
+  .contact{
+    background-color:$Bcol;
+    h3,
+    p{
+      color:$W;
+    }
+    h3{
+      font-size:25px;
+      line-height:30px;
+      @media screen and (min-width:768px){
+        font-size:45px;
+        line-height:50px;
+      }
+    }
+    .underline{
+      width:100%;
+      height:1px;
+      background-color:$W;
+    }
+    .p-1{
+      font-size:16px;
+      line-height:26px;
+      margin:50px 0 0;
+      @media screen and (max-width:349px){
+        font-size:14px;
+      }
+      @media screen and (min-width:768px){
+        font-size:24px;
+        line-height:40px;
+        margin:80px 0 0;
+      }
+    }
+    .contact-mail{
+      display:block;
+      background-color:#66CCFF;
+      width:100%;
+      height:50px;
+      margin:21px 0;
+      text-decoration: none;
+      @media screen and (min-width:768px){
+        height:80px;
+        margin:45px 0;
+        width:500px;
+      }
+      .p-2{
+        font-size:14px;
+        line-height:50px;
+        text-align:center;
+        @media screen and (min-width:768px){
+          line-height:80px;
+          font-size:24px;
+        }
+      }
+    }
+    label{
+      line-height:30px;
+    }
+    textarea{
+      display:block;
+      width:100%;
+    }
+    input{
+      width:100%;
+      max-width:500px;
+    }
+    .send-button{
+      width:100px;
+      height:30px;
+      border:1px $W solid;
+      border-radius:15px;
+      margin: 20px  auto 0;
+      background-color:$W;
+      transition:0.2s;
+      // a{
+        font-family:sans-serif;
+        color:$Acol;
+        display:block;
+        line-height:30px;
+        text-align:center;
+        text-decoration: none;
+        @media screen and (min-width:500px){
+          font-size:20px;
+        }
+      // }
+      @media screen and (min-width:834px){
+        width:140px;
+        height:40px;
+        border-radius:20px;
+        // a{
+          font-size:24px;
+          line-height:40px;
+        // }
+      }
+    }
+    .wpcf7-mail-sent-ok,
+    .wpcf7-mail-sent-ng,
+    .wpcf7-spam-blocked,
+    .wpcf7-validation-errors {
+    color:#ffffff;
+    font-family: 'Noto Serif JP', serif;
+    font-size:20px;
+    border:none;
+    }
+  }
+
+.footer{
+  position:fixed;
+  width:100%;
+  display:none;
+  .container{
+    @media screen and (max-width:361px){
+        padding:21px 0;
+    }
+    @media screen and (min-width:1025px){
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+    }
+    .for-flex{
+      @media screen and (min-width:1025px){
+        width:40%;
+      }
+    }
+
+  }
+  h2,
+  a,
+  p{
+    color:$W;
+  }
+  h2{
+    font-size:18px;
+    line-height:36px;
+    @media screen and (max-width:376px){
+      display:none;
+    }
+    @media screen and (min-width:768px){
+      font-size:24px;
+      line-height:40px;
+    }
+  }
+  .footer-title{
+    margin:21px 0 0;
+    @media screen and (max-width:361px){
+      margin:0;
+    }
+    @media screen and (min-width:768px){
+      margin:45px 0 0;
+    }
+    .footer-logo{
+      font-size:48px;
+      font-family: 'Poiret One', cursive;
+      @media screen and (max-width:361px){
+        line-height:48px;
+      }
+      @media screen and (min-width:768px){
+        font-size:80px;
+      }
+    }
+    .copyright{
+      font-size:10px;
+    }
+  }
+  .page-list{
+    margin:50px 0;
+    @media screen and (min-width:768px){
+      margin:80px 0 0;
+    }
+    @media screen and (min-width:1025px){
+      width:40%;
+      margin:0;
+    }
+    a{
+      font-size:16px;
+      text-decoration:none;
+      display: block;
+      margin:0 0 21px;
+      @media screen and (max-width:361px){
+        font-size:14px;
+      }
+      @media screen and (min-width:768px){
+        font-size:16px;
+        margin:0 0 30px;
+      }
+      @media screen and (min-width:1024px){
+        font-size:18px;
+        margin:0 0 45px;
+      }
+      @media screen and (min-width:1025px){
+        font-size:18px;
+        margin:0 0 30px;
+      }
+    }
+    .layer2{
+      margin:0 0 21px 21px;
+      @media screen and (min-width:768px){
+        margin:0 0 30px 45px;
+      }
+    }
+    .uncoming{
+      opacity:0.6;
+    }
+  }
+}
+
+// 下層ページの共通部分
+
+.menu-on{
+  .menu{
+    display:block;
+  }
+}
+
+
+
+.sub-footer{
+  position:fixed;
+  background-image:url("img-for-sub/top-eye.jpg");
+  background-size:cover;
+  background-position:center;
+  width:100%;
+  height:100vh;
+  z-index:-99;
+  @media screen and (min-width:1025px){
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  h2,
+  a,
+  p{
+    color:$W;
+  }
+  h2{
+    font-size:18px;
+    line-height:36px;
+    position:absolute;
+    top:91px;
+    left:5%;
+    @media screen and (max-width:376px){
+      display:none;
+    }
+    @media screen and (min-width:768px){
+      font-size:24px;
+      line-height:40px;
+      top:165px;
+    }
+    @media screen and (min-width:1025px){
+      left:10%;
+      top:205px;
+    }
+  }
+  .footer-title{
+    position:absolute;
+    top:21px;
+    left:5%;
+    @media screen and (min-width:768px){
+      top:45px;
+    }
+    @media screen and (min-width:1025px){
+      left:10%;
+      top:80px;
+    }
+    .footer-logo{
+      font-size:48px;
+      font-family: 'Poiret One', cursive;
+      @media screen and (min-width:768px){
+        font-size:80px;
+      }
+    }
+    .footer-readable{
+      text-align:center;
+      font-family:sans-serif;
+      font-size:12px;
+    }
+  }
+  .page-list{
+    position:absolute;
+    top:235px;
+    left:5%;
+    display:none;
+    @media screen and (max-width:375px){
+      top:120px;
+    }
+    @media screen and (min-width:768px){
+      top:320px;
+    }
+    @media screen and (min-width:1025px){
+      top:80px;
+      left:60%;
+    }
+    a{
+      font-size:16px;
+      text-decoration:none;
+      display: block;
+      margin:0 0 21px;
+      @media screen and (max-width:361px){
+        font-size:14px;
+      }
+      @media screen and (min-width:768px){
+        font-size:16px;
+        margin:0 0 30px;
+      }
+      @media screen and (min-width:1024px){
+        font-size:18px;
+        margin:0 0 45px;
+      }
+      @media screen and (min-width:1025px){
+        font-size:18px;
+        margin:0 0 30px;
+      }
+    }
+    .layer2{
+      margin:0 0 21px 21px;
+      @media screen and (min-width:768px){
+        margin:0 0 30px 45px;
+      }
+    }
+    .uncoming{
+      opacity:0.6;
+    }
+  }
+  .copyright{
+    position:absolute;
+    bottom:10px;
+    font-size:10px;
+    text-align:center;
+    left:50%;
+    transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+  }
+}
+
+
+.empty-element{
+  position:relative;
+  width:100%;
+}
+
+.under-element{
+  position:absolute;
+  width:100%;
+}
+
+.sub-content{
+  position:absolute;
+  padding-bottom:101vh;
+  top:235px;
+  width:90%;
+  left:5%;
+  z-index:0;
+  @media screen and (max-width:375px){
+    top:120px;
+  }
+  @media screen and (min-width:768px){
+    top:320px;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+    left:10%;
+  }
+  .sub-content-beta{
+    background-color:$W;
+  }
+  h3{
+    font-size:25px;
+    line-height:30px;
+    @media screen and (min-width:768px){
+      font-size:45px;
+      line-height:50px;
+    }
+  }
+  .underline{
+    width:100%;
+    height:1px;
+    background-color:$Acol;
+  }
+}
+
+
+// ここから事業内容ページのスタイリング
+
+
+.service-content{
+  .service-fact{
+    margin:50px 0 0;
+    position:relative;
+    @media screen and (min-width:768px){
+      margin:80px 0 0;
+    }
+    .service-fact-img{
+      width:100%;
+      height:174px;
+      position:relative;
+      background-size:cover;
+      background-position:center;
+      @media screen and (min-width:768px){
+        height:350px;
+      }
+      @media screen and (min-width:1025px){
+        height:500px;
+      }
+      .service-fact-img-bg{
+        width:100%;
+        height:50px;
+        position:absolute;
+        bottom:0;
+        background-color:$W;
+        opacity:0.8;
+        @media screen and (min-width:768px){
+          height:80px;
+        }
+        p{
+          font-size:20px;
+          line-height:50px;
+          text-align:center;
+          @media screen and (min-width:768px){
+            font-size:24px;
+            line-height:80px;
+          }
+        }
+      }
+    }
+    .service-web-img{
+      background-image:url('img-for-sub/service1.jpg');
+    }
+    .service-movie-img{
+      background-image:url('img-for-sub/service2.jpg');
+    }
+    .service-edu-img{
+      background-image:url('img-for-sub/service5.jpg');
+    }
+    .service-consul-img{
+      background-image:url('img-for-sub/service4.jpg');
+    }
+    .service-develop-img{
+      background-image:url('img-for-sub/service7.jpg');
+    }
+    .service-fact-bg{
+      width:100%;
+      background-color:$Gray1;
+      padding:0 0 30px;
+      @media screen and (min-width:768px){
+        padding:0 0 50px;
+      }
+      .for-flex{
+        @media screen and (min-width:1025px){
+          display:flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width:90%;
+          margin: 0 auto;
+          .school-each{
+            width:48%;
+          }
+          .service-fact-subtitle{
+            margin:50px 0 0;
+          }
+          .service-fact-text{
+            padding:45px 0 0;
+
+          }
+        }
+      }
+      .service-fact-text{
+        padding:21px 5% 0;
+        font-size:14px;
+        line-height:24px;
+        @media screen and (min-width:768px){
+          padding:45px 5% 0;
+          font-size:16px;
+          line-height:26px;
+        }
+      }
+      .service-fact-subtitle{
+        font-size:16px;
+        line-height:30px;
+        height:30px;
+        font-weight:bold;
+        margin:30px 5% 0;
+        padding:0 0 0 10px;
+        width:85%;
+        border-left: 5px solid #FF9819;
+        background-color: #FFEFDB;
+        @media screen and (min-width:768px){
+          font-size:18px;
+          margin:50px 5% 0;
+        }
+      }
+      .button{
+        margin:30px auto 0px;
+        @media screen and (min-width:768px){
+          margin:50px auto 0px;
+        }
+      }
+      .button-attention{
+        font-size:8px;
+        text-align:center;
+        line-height:20px;
+      }
+    }
+    .uncoming-service-filter{
+      background-color:$B;
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      left:0;
+      opacity:0.4;
+    }
+    .coming-soon{
+      width:129px;
+      height:24px;
+      background-color:#A30A0B;
+      border-radius: 12px;
+      position:absolute;
+      bottom:-12px;
+      left:50%;
+      transform: translateX(-50%);
+     -webkit-transform: translateX(-50%);
+     @media screen and (min-width:768px){
+       width:150px;
+       height:30px;
+       border-radius: 15px;
+       bottom:-15px;
+     }
+      p{
+        line-height:24px;
+        font-size:14px;
+        color:$W;
+        text-align:center;
+        @media screen and (min-width:768px){
+          font-size:16px;
+          line-height:30px;
+        }
+      }
+    }
+  }
+}
+
+// ここから会社概要ページのスタイリング
+
+.about-content{
+  .about-desc-top{
+    margin:50px 0 0;
+    @media screen and (min-width:768px){
+      margin:80px 0 0;
+    }
+  }
+  .about-desc1{
+    background-color:$Gray1;
+    width:100%;
+    height:40px;
+    @media screen and (min-width:768px){
+      height:52px;
+    }
+    p{
+      font-size:14px;
+      line-height:40px;
+      width:90%;
+      margin:0 auto;
+      @media screen and (min-width:768px){
+        font-size:16px;
+        line-height:52px;
+      }
+    }
+  }
+  .about-desc2{
+    background-color:$Gray2;
+    width:100%;
+    height:40px;
+    @media screen and (min-width:768px){
+      height:52px;
+    }
+    p{
+      font-size:14px;
+      line-height:40px;
+      width:90%;
+      margin:0 auto;
+      @media screen and (min-width:768px){
+        font-size:16px;
+        line-height:52px;
+      }
+    }
+  }
+  .about-desc-bottom{
+    height:80px;
+    @media screen and (min-width:768px){
+      height:52px;
+    }
+  }
+}
+
+
+// ここからサイトマップのスタイリング
+.sitemap-content{
+  .page-list{
+    display:block;
+    position:absolute;
+    top:120px;
+    left:5%;
+    @media screen and (min-width:768px){
+      top:200px;
+    }
+    @media screen and (min-width:1025px){
+      top:80px;
+      left:40%;
+    }
+    a{
+      font-size:12px;
+      @media screen and (min-width:414px){
+        font-size:14px;
+      }
+      @media screen and (min-width:768px){
+        font-size:16px;
+      }
+      @media screen and (min-width:834px){
+        font-size:20px;
+      }
+      @media screen and (min-width:1024px){
+        font-size:24px;
+      }
+      @media screen and (min-width:1025px){
+        font-size:16px;
+      }
+    }
+    .layer1{
+      margin:0 0 12px 0;
+      @media screen and (min-width:360px){
+        margin:0 0 14px 0;
+      }
+      @media screen and (min-width:375px){
+        margin:0 0 21px 0;
+      }
+      @media screen and (min-width:768px){
+        margin:0 0 30px 0;
+      }
+      @media screen and (min-width:1024px){
+        margin:0 0 45px 0;
+      }
+      @media screen and (min-width:1025px){
+        margin:0 0 21px 0;
+      }
+    }
+    .layer2{
+      margin:0 0 12px 21px;
+      @media screen and (min-width:360px){
+        margin:0 0 14px 21px;
+      }
+      @media screen and (min-width:375px){
+        margin:0 0 21px 21px;
+      }
+      @media screen and (min-width:768px){
+        margin:0 0 30px 45px;
+      }
+      @media screen and (min-width:1024px){
+        margin:0 0 45px 45px;
+      }
+      @media screen and (min-width:1025px){
+        margin:0 0 21px 45px;
+      }
+    }
+    .layer3{
+      margin:0 0 12px 42px;
+      @media screen and (min-width:360px){
+        margin:0 0 14px 42px;
+      }
+      @media screen and (min-width:375px){
+        margin:0 0 21px 42px;
+      }
+      @media screen and (min-width:768px){
+        margin:0 0 30px 90px;
+      }
+      @media screen and (min-width:1024px){
+        margin:0 0 45px 90px;
+      }
+      @media screen and (min-width:1025px){
+        margin:0 0 21px 90px;
+      }
+    }
+    .layer4{
+      margin:0 0 12px 63px;
+      @media screen and (min-width:360px){
+        margin:0 0 14px 63px;
+      }
+      @media screen and (min-width:375px){
+        margin:0 0 21px 63px;
+      }
+      @media screen and (min-width:768px){
+        margin:0 0 30px 135px;
+      }
+      @media screen and (min-width:1024px){
+        margin:0 0 45px 135px;
+      }
+      @media screen and (min-width:1025px){
+        margin:0 0 21px 135px;
+      }
+    }
+    .uncoming{
+      opacity:0.6;
+    }
+  }
+}
+
+// ここから経営理念のスタイリング
+.vision-content{
+  p,
+  h4{
+    font-size:14px;
+    line-height:24px;
+    margin-bottom:21px;
+    @media screen and (min-width:768px){
+      font-size:16px;
+      line-height:26px;
+      margin:0 0 45px;
+    }
+  }
+  h4{
+    font-weight:bold;
+  }
+  .vision-subtitle{
+    font-size:16px;
+    margin:0px 0 0 10px;
+    line-height:30px;
+  }
+  .vision-pol-title,
+  .policy-pol-title,
+  .manage-pol-title{
+    margin:0 0 30px;
+    @media screen and (min-width:768px){
+      margin:0 0 50px;
+    }
+  }
+  .vision-pol-title{
+    width:100%;
+    border-left: 5px solid #a30a0b;
+    background-color: #fff4f9;
+  }
+  .policy-pol-title{
+    width:100%;
+    border-left: 5px solid #ff8c00;
+    background-color: #fff1e0;
+  }
+  .manage-pol-title{
+    width:100%;
+    border-left: 5px solid #00187e;
+    background-color: #f3ffff;
+  }
+  h2{
+    font-size:24px;
+    text-align:center;
+    font-weight: bold;
+    z-index:2;
+    position:relative;
+    color:#fff;
+    padding-top:120px;
+    @media screen and (min-width:768px){
+      font-size:45px;
+    }
+    @media screen and (min-width:1024px){
+      font-size:50px;
+    }
+  }
+  .manage-pol-container,
+  .policy-pol-container,
+  .vision-pol-container{
+    background-size:cover;
+    background-position:center;
+    width:100%;
+    height:300px;
+    margin:50px 0 30px;
+    @media screen and (min-width:768px){
+      margin:80px 0 50px;
+    }
+  }
+  .manage-pol-container{
+    background-image:url('img/manage-pol.jpg');
+  }
+  .policy-pol-container{
+    background-image:url('img/policy.jpg');
+  }
+  .vision-pol-container{
+    background-image:url('img/vision.jpg');
+  }
+}
+
+// ここからメンバーのスタイリング
+.member-content{
+  .stprA{
+    font-size:16px;
+    line-height:26px;
+    margin:50px 0 0;
+    @media screen and (min-width:768px){
+      font-size:24px;
+      line-height:40px;
+      margin:80px 0 0;
+    }
+  }
+  .person1{
+    margin: 50px 0 0;
+    @media screen and (min-width:768px){
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 80px 0 0;
+    }
+    .forflex-m{
+      @media screen and (min-width:768px){
+        width:50%;
+      }
+    }
+    .person-photo{
+      width:100%;
+      height:300px;
+      background-size:cover;
+      background-position:center;
+      @media screen and (min-width:500px){
+        height:400px;
+      }
+      @media screen and (min-width:630px){
+        height:500px;
+      }
+      @media screen and (min-width:767px){
+        height:300px;
+      }
+      @media screen and (min-width:900px){
+        height:400px;
+      }
+      @media screen and (min-width:1300px){
+        height:500px;
+      }
+      @media screen and (min-width:2000px){
+        height:760px;
+      }
+    }
+    .personphoto1{
+      background-image:url("img-for-sub/genki.jpg");
+    }
+    .personphoto2{
+      background-image:url("img-for-sub/yuki.jpg");
+    }
+    .personphoto4{
+      background-image:url("img-for-sub/simatu.jpg");
+    }
+    .personphoto5{
+      background-image:url("img-for-sub/kaito.jpg");
+    }
+    .personphoto6{
+      background-image:url("img-for-sub/kuroda.jpg");
+    }
+    .personphoto7{
+      background-image:url("img-for-sub/yuto.jpg");
+    }
+    .personphoto8{
+      background-image:url("img-for-sub/ono.jpg");
+    }
+    .personphoto9{
+      background-image:url("img-for-sub/takao.jpg");
+    }
+    .personphoto10{
+      background-image:url("img-for-sub/iwa.jpg");
+    }
+    .name-and-role{
+      display:flex;
+      justify-content: space-between;
+      h2{
+        font-size:26px;
+        line-height:40px;
+        margin:21px 0 0;
+        @media screen and (min-width:768px){
+            font-size:30px;
+        }
+        @media screen and (min-width:1280px){
+            font-size:34px;
+        }
+      }
+      p{
+        font-size:14px;
+        margin-top:37px;
+        @media screen and (min-width:768px){
+            font-size:18px;
+            margin-top:37px;
+        }
+        @media screen and (min-width:1280px){
+            font-size:22px;
+            margin-top:35px;
+        }
+      }
+    }
+    .underline{
+      width:100%;
+      height:1px;
+      background-color:$Acol;
+      margin:0 0 21px;
+    }
+    .introduce{
+      font-size:14px;
+      line-height:24px;
+      @media screen and (min-width:768px){
+        font-size:16px;
+        line-height:26px;
+        width:46%;
+      }
+    }
+  }
+}
+
+// ここからブログのスタイリング
+
+.blog-content{
+  .stprA{
+    font-size:16px;
+    line-height:26px;
+    margin:50px 0 0;
+
+    @media screen and (min-width:768px){
+      font-size:24px;
+      line-height:40px;
+      margin:80px 0 0;
+
+    }
+  }
+  .articles{
+    margin:30px 0 0;
+    @media screen and (min-width:500px){
+      margin: 50px 0 0;
+    }
+    @media screen and (min-width:700px){
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    @media screen and (min-width:1100px){
+      margin: 70px 0 0;
+    }
+    .article1.is-empty{
+      height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .article1{
+      @media screen and (min-width:700px){
+        width:48%;
+        margin:0 1%;
+      }
+      @media screen and (min-width:1300px){
+        width:32%;
+        margin:0 0.66%;
+      }
+      .article-date{
+        font-size:12px;
+        line-height:20px;
+      }
+      .article-img{
+        width:100%;
+        display:block;
+        position:relative;
+        margin:0 0 10px;
+        transition:0.2s;
+        img{
+          width:100%;
+          height:160px;
+          @media screen and (min-width:350px){
+            height:195px;
+          }
+          @media screen and (min-width:410px){
+            height:230px;
+          }
+          @media screen and (min-width:600px){
+            height:300px;
+          }
+          @media screen and (min-width:700px){
+            height:180px;
+          }
+          @media screen and (min-width:900px){
+            height:240px;
+          }
+          @media screen and (min-width:1300px){
+            height:200px;
+          }
+          @media screen and (min-width:1700px){
+            height:240px;
+          }
+          @media screen and (min-width:2000px){
+            height:360px;
+          }
+        }
+        .post-back{
+          background-color:$W;
+          height:60px;
+          bottom:0;
+          position:absolute;
+          width:100%;
+          opacity:0.8;
+          @media screen and (min-width:410px){
+            height:80px;
+          }
+          p{
+            position:absolute;
+            top:0;
+            font-size:16px;
+            width:90%;
+            left:5%;
+            line-height:25px;
+            margin: 5px 0;
+            @media screen and (min-width:410px){
+              line-height:30px;
+              margin:10px 0;
+            }
+            @media screen and (min-width:500px){
+              font-size:18px;
+            }
+            @media screen and (min-width:834px){
+              font-size:20px;
+            }
+          }
+        }
+      }
+      .article-img:hover{
+          opacity:0.7;
+          transition:0.2s;
+      }
+    }
+  }
+}

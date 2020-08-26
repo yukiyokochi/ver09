@@ -1,0 +1,244 @@
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: sans-serif;
+  font-weight: normal;
+  color: #4a3a3a; }
+
+b {
+  font-family: sans-serif;
+  color: #4a3a3a; }
+
+.bold {
+  font-weight: bold; }
+
+a {
+  cursor: pointer; }
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0; }
+  @media screen and (min-width: 768px) {
+    .container {
+      padding: 80px 0; } }
+  @media screen and (min-width: 1025px) {
+    .container {
+      padding: 80px 0;
+      width: 80%; } }
+  @media screen and (min-width: 1500px) {
+    .container {
+      padding: 80px 0;
+      width: 70%; } }
+
+.menu {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  top: 21px;
+  right: 5%;
+  z-index: 101;
+  position: fixed; }
+  @media screen and (min-width: 768px) {
+    .menu {
+      top: 45px; } }
+  @media screen and (min-width: 1025px) {
+    .menu {
+      top: 80px;
+      right: 10%; } }
+  @media screen and (min-width: 1500px) {
+    .menu {
+      top: 80px;
+      right: 15%; } }
+  .menu .menu-button {
+    position: relative;
+    width: 44px;
+    height: 32px;
+    display: inline-block;
+    margin: 13px 9px;
+    transition: all .4s;
+    box-sizing: border-box; }
+    .menu .menu-button span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #4a3a3a;
+      transition: all .4s;
+      box-sizing: border-box;
+      display: inline-block; }
+      .menu .menu-button span:nth-of-type(1) {
+        top: 0; }
+      .menu .menu-button span:nth-of-type(2) {
+        top: 15px; }
+      .menu .menu-button span:nth-of-type(3) {
+        bottom: 0; }
+  .menu .menu-button.active span:nth-of-type(1) {
+    -webkit-transform: translateY(15px) rotate(-315deg);
+    transform: translateY(15px) rotate(-315deg); }
+  .menu .menu-button.active span:nth-of-type(2) {
+    opacity: 0; }
+  .menu .menu-button.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-15px) rotate(315deg);
+    transform: translateY(-15px) rotate(315deg); }
+
+.menu-after {
+  background-color: #000000;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.4s;
+  position: fixed;
+  display: none;
+  z-index: 101;
+  opacity: 0.8;
+  top: 0; }
+  .menu-after a {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0 0 50px;
+    text-decoration: none; }
+    .menu-after a:nth-of-type(1) {
+      margin: 20vh 0 50px 0; }
+      @media screen and (min-width: 768px) {
+        .menu-after a:nth-of-type(1) {
+          margin: 20vh 0 80px 0; } }
+      @media screen and (min-width: 1025px) {
+        .menu-after a:nth-of-type(1) {
+          margin: 25vh 0 50px 0; } }
+    @media screen and (min-width: 768px) {
+      .menu-after a {
+        font-size: 18px;
+        margin: 0 0 80px; } }
+    @media screen and (min-width: 1025px) {
+      .menu-after a {
+        font-size: 24px;
+        margin: 0 0 50px; } }
+
+.breadcrumbs {
+  color: #ffffff;
+  font-size: 10px;
+  position: absolute;
+  top: 131px;
+  right: 5%; }
+  @media screen and (min-width: 768px) {
+    .breadcrumbs {
+      top: 185px; } }
+  @media screen and (min-width: 1025px) {
+    .breadcrumbs {
+      top: 220px;
+      right: 10%; } }
+  .breadcrumbs a {
+    color: #ffffff; }
+
+.sub-footer {
+  position: fixed;
+  background-image: url("img-for-sub/top-eye.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  z-index: -99; }
+  @media screen and (min-width: 1025px) {
+    .sub-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
+  .sub-footer h2,
+  .sub-footer a,
+  .sub-footer p {
+    color: #ffffff; }
+  .sub-footer h2 {
+    font-size: 18px;
+    line-height: 36px;
+    position: absolute;
+    top: 91px;
+    left: 5%; }
+    @media screen and (max-width: 376px) {
+      .sub-footer h2 {
+        display: none; } }
+    @media screen and (min-width: 768px) {
+      .sub-footer h2 {
+        font-size: 24px;
+        line-height: 40px;
+        top: 165px; } }
+    @media screen and (min-width: 1025px) {
+      .sub-footer h2 {
+        left: 10%;
+        top: 205px; } }
+  .sub-footer .footer-title {
+    position: absolute;
+    top: 21px;
+    left: 5%; }
+    @media screen and (min-width: 768px) {
+      .sub-footer .footer-title {
+        top: 45px; } }
+    @media screen and (min-width: 1025px) {
+      .sub-footer .footer-title {
+        left: 10%;
+        top: 80px; } }
+    .sub-footer .footer-title .footer-logo {
+      font-size: 48px;
+      font-family: 'Poiret One', cursive; }
+      @media screen and (min-width: 768px) {
+        .sub-footer .footer-title .footer-logo {
+          font-size: 80px; } }
+    .sub-footer .footer-title .footer-readable {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 12px; }
+  .sub-footer .page-list {
+    position: absolute;
+    top: 235px;
+    left: 5%; }
+    @media screen and (max-width: 375px) {
+      .sub-footer .page-list {
+        top: 120px; } }
+    @media screen and (min-width: 768px) {
+      .sub-footer .page-list {
+        top: 320px; } }
+    @media screen and (min-width: 1025px) {
+      .sub-footer .page-list {
+        top: 80px;
+        left: 60%; } }
+    .sub-footer .page-list a {
+      font-size: 16px;
+      text-decoration: none;
+      display: block;
+      margin: 0 0 21px; }
+      @media screen and (max-width: 361px) {
+        .sub-footer .page-list a {
+          font-size: 14px; } }
+      @media screen and (min-width: 768px) {
+        .sub-footer .page-list a {
+          font-size: 16px;
+          margin: 0 0 30px; } }
+      @media screen and (min-width: 1024px) {
+        .sub-footer .page-list a {
+          font-size: 18px;
+          margin: 0 0 45px; } }
+      @media screen and (min-width: 1025px) {
+        .sub-footer .page-list a {
+          font-size: 18px;
+          margin: 0 0 30px; } }
+    .sub-footer .page-list .layer2 {
+      margin: 0 0 21px 21px; }
+      @media screen and (min-width: 768px) {
+        .sub-footer .page-list .layer2 {
+          margin: 0 0 30px 45px; } }
+    .sub-footer .page-list .uncoming {
+      opacity: 0.6; }
+  .sub-footer .copyright {
+    position: absolute;
+    bottom: 10px;
+    font-size: 10px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%); }
+
+/*# sourceMappingURL=common.css.map */

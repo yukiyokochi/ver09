@@ -1,0 +1,293 @@
+
+// カラーの定義
+
+$Acol:#4a3a3a;
+$Bcol:#043314;
+$Button:#F8B869;
+$L-1:#fdfdfd;
+$L-2:#f4f4f4;
+$W:#ffffff;
+$B:#000000;
+$Gray1:#F2F2F2;
+$Gray2:#FAFAFA;
+
+// テキストの統一
+
+p,
+h1,
+h2,
+h3,
+h4,
+a{
+  font-family: sans-serif;
+  font-weight:normal;
+  color:$Acol;
+}
+
+b{
+  font-family: sans-serif;
+  color:$Acol;
+}
+
+
+.bold{
+  font-weight: bold;
+}
+// その他共通要素
+
+a{
+  cursor:pointer;
+}
+
+.container{
+  width:90%;
+  margin:0 auto;
+  padding:50px 0;
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    padding:80px 0;
+    width:80%;
+  }
+  @media screen and (min-width:1500px){
+    padding:80px 0;
+    width:70%;
+  }
+}
+
+.menu{
+  width:60px;
+  height:60px;
+  background-color:$W;
+  top:21px;
+  right:5%;
+  z-index:101;
+  position:fixed;
+  @media screen and (min-width:768px){
+    top:45px;
+  }
+  @media screen and (min-width:1025px){
+    top:80px;
+    right:10%;
+  }
+  @media screen and (min-width:1500px){
+    top:80px;
+    right:15%;
+  }
+  .menu-button{
+    position:relative;
+    width:44px;
+    height:32px;
+    display:inline-block;
+    margin:13px 9px;
+    transition: all .4s;
+    box-sizing: border-box;
+    span{
+      position:absolute;
+      left:0;
+      width:100%;
+      height:2px;
+      background-color:$Acol;
+      transition: all .4s;
+      box-sizing: border-box;
+      display:inline-block;
+      &:nth-of-type(1) {
+        top: 0;
+      }
+      &:nth-of-type(2) {
+        top: 15px;
+      }
+      &:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+  }
+  .menu-button.active span:nth-of-type(1) {
+    -webkit-transform: translateY(15px) rotate(-315deg);
+    transform: translateY(15px) rotate(-315deg);
+  }
+  .menu-button.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu-button.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-15px) rotate(315deg);
+    transform: translateY(-15px) rotate(315deg);
+  }
+}
+
+// メニュークリック時
+
+.menu-after{
+  background-color:$B;
+  width:100vw;
+  height:100vh;
+  transition:0.4s;
+  position:fixed;
+  display:none;
+  z-index:101;
+  opacity:0.8;
+  top:0;
+  a{
+    text-align:center;
+    display:block;
+    font-size:16px;
+    color:$W;
+    margin:0 0 50px;
+    text-decoration: none;
+    &:nth-of-type(1) {
+      margin:20vh 0 50px 0;
+      @media screen and (min-width:768px){
+        margin:20vh 0 80px 0;
+      }
+      @media screen and (min-width:1025px){
+        margin:25vh 0 50px 0;
+      }
+    }
+    @media screen and (min-width:768px){
+        font-size:18px;
+        margin:0 0 80px;
+    }
+    @media screen and (min-width:1025px){
+        font-size:24px;
+        margin:0 0 50px;
+    }
+  }
+}
+
+
+.breadcrumbs{
+  color:$W;
+  font-size:10px;
+  position:absolute;
+  top:131px;
+  right:5%;
+  @media screen and (min-width:768px){
+    top:185px;
+  }
+  @media screen and (min-width:1025px){
+    top:220px;
+    right:10%;
+  }
+  a{
+    color:$W;
+  }
+}
+
+.sub-footer{
+  position:fixed;
+  background-image:url("img-for-sub/top-eye.jpg");
+  background-size:cover;
+  background-position:center;
+  width:100%;
+  height:100vh;
+  z-index:-99;
+  @media screen and (min-width:1025px){
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  h2,
+  a,
+  p{
+    color:$W;
+  }
+  h2{
+    font-size:18px;
+    line-height:36px;
+    position:absolute;
+    top:91px;
+    left:5%;
+    @media screen and (max-width:376px){
+      display:none;
+    }
+    @media screen and (min-width:768px){
+      font-size:24px;
+      line-height:40px;
+      top:165px;
+    }
+    @media screen and (min-width:1025px){
+      left:10%;
+      top:205px;
+    }
+  }
+  .footer-title{
+    position:absolute;
+    top:21px;
+    left:5%;
+    @media screen and (min-width:768px){
+      top:45px;
+    }
+    @media screen and (min-width:1025px){
+      left:10%;
+      top:80px;
+    }
+    .footer-logo{
+      font-size:48px;
+      font-family: 'Poiret One', cursive;
+      @media screen and (min-width:768px){
+        font-size:80px;
+      }
+    }
+    .footer-readable{
+      text-align:center;
+      font-family:sans-serif;
+      font-size:12px;
+    }
+  }
+  .page-list{
+    position:absolute;
+    top:235px;
+    left:5%;
+    // display:none;
+    @media screen and (max-width:375px){
+      top:120px;
+    }
+    @media screen and (min-width:768px){
+      top:320px;
+    }
+    @media screen and (min-width:1025px){
+      top:80px;
+      left:60%;
+    }
+    a{
+      font-size:16px;
+      text-decoration:none;
+      display: block;
+      margin:0 0 21px;
+      @media screen and (max-width:361px){
+        font-size:14px;
+      }
+      @media screen and (min-width:768px){
+        font-size:16px;
+        margin:0 0 30px;
+      }
+      @media screen and (min-width:1024px){
+        font-size:18px;
+        margin:0 0 45px;
+      }
+      @media screen and (min-width:1025px){
+        font-size:18px;
+        margin:0 0 30px;
+      }
+    }
+    .layer2{
+      margin:0 0 21px 21px;
+      @media screen and (min-width:768px){
+        margin:0 0 30px 45px;
+      }
+    }
+    .uncoming{
+      opacity:0.6;
+    }
+  }
+  .copyright{
+    position:absolute;
+    bottom:10px;
+    font-size:10px;
+    text-align:center;
+    left:50%;
+    transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+  }
+}

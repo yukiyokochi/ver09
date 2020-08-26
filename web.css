@@ -1,0 +1,1911 @@
+@charset "UTF-8";
+/*
+Theme Name:日本一庶民派のWeb制作会社 Ver.0.9
+Theme URI:ver-nine.com
+Description:日本一庶民派のWeb制作会社
+Version:0.9
+Author:Yuki Yokochi
+Author URI:yokochi.tokyo
+
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: 'Noto Serif JP', serif;
+  color: #4a3a3a; }
+
+a {
+  cursor: pointer; }
+
+.breadcrumbs {
+  color: #ffffff;
+  font-size: 10px;
+  position: absolute;
+  top: 131px;
+  right: 5%; }
+  @media screen and (min-width: 768px) {
+    .breadcrumbs {
+      top: 185px; } }
+  @media screen and (min-width: 1025px) {
+    .breadcrumbs {
+      top: 220px;
+      right: 10%; } }
+  @media screen and (min-width: 1500px) {
+    .breadcrumbs {
+      top: 220px;
+      right: 15%; } }
+  .breadcrumbs a {
+    color: #ffffff; }
+
+.menu {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  top: 21px;
+  right: 5%;
+  z-index: 101;
+  position: fixed; }
+  @media screen and (min-width: 768px) {
+    .menu {
+      top: 45px; } }
+  @media screen and (min-width: 1025px) {
+    .menu {
+      top: 80px;
+      right: 10%; } }
+  @media screen and (min-width: 1500px) {
+    .menu {
+      top: 80px;
+      right: 15%; } }
+  .menu .menu-button {
+    position: relative;
+    width: 44px;
+    height: 32px;
+    display: inline-block;
+    margin: 13px 9px;
+    transition: all .4s;
+    box-sizing: border-box; }
+    .menu .menu-button span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #4a3a3a;
+      transition: all .4s;
+      box-sizing: border-box;
+      display: inline-block; }
+      .menu .menu-button span:nth-of-type(1) {
+        top: 0; }
+      .menu .menu-button span:nth-of-type(2) {
+        top: 15px; }
+      .menu .menu-button span:nth-of-type(3) {
+        bottom: 0; }
+  .menu .menu-button.active span:nth-of-type(1) {
+    -webkit-transform: translateY(15px) rotate(-315deg);
+    transform: translateY(15px) rotate(-315deg); }
+  .menu .menu-button.active span:nth-of-type(2) {
+    opacity: 0; }
+  .menu .menu-button.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-15px) rotate(315deg);
+    transform: translateY(-15px) rotate(315deg); }
+
+.menu-after {
+  background-color: #000000;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.4s;
+  position: fixed;
+  display: none;
+  z-index: 100;
+  opacity: 0.8;
+  top: 0; }
+  .menu-after a {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0 0 50px;
+    text-decoration: none; }
+    .menu-after a:nth-of-type(1) {
+      margin: 20vh 0 50px 0; }
+      @media screen and (min-width: 768px) {
+        .menu-after a:nth-of-type(1) {
+          margin: 20vh 0 80px 0; } }
+      @media screen and (min-width: 1025px) {
+        .menu-after a:nth-of-type(1) {
+          margin: 25vh 0 50px 0; } }
+    @media screen and (min-width: 768px) {
+      .menu-after a {
+        font-size: 18px;
+        margin: 0 0 80px; } }
+    @media screen and (min-width: 1025px) {
+      .menu-after a {
+        font-size: 24px;
+        margin: 0 0 50px; } }
+
+.toTop {
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  z-index: 100;
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .toTop {
+      bottom: 45px; } }
+  @media screen and (min-width: 1025px) {
+    .toTop {
+      bottom: 50px;
+      right: 10%; } }
+  @media screen and (min-width: 1500px) {
+    .toTop {
+      right: 15%; } }
+  .toTop a {
+    display: block;
+    text-decoration: none;
+    font-size: 44px;
+    line-height: 44px;
+    margin: 7px 0 9px;
+    text-align: center; }
+
+.more-button,
+.more-button1 {
+  transition: 0.2s; }
+
+.more-button:hover,
+.more-button1:hover {
+  opacity: 0.7;
+  transition: 0.2s; }
+
+.works {
+  background-color: #194800;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -99;
+  top: 0; }
+  .works p {
+    color: #ffffff;
+    font-size: 25px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0 0; }
+    @media screen and (min-width: 767px) {
+      .works p {
+        font-size: 45px; } }
+    @media screen and (min-width: 1024px) {
+      .works p {
+        padding: 30px 0 0; } }
+    @media screen and (min-width: 1025px) {
+      .works p {
+        width: 80%; } }
+    @media screen and (min-width: 1500px) {
+      .works p {
+        width: 70%; } }
+  .works .underline {
+    background-color: #ffffff;
+    width: 90%;
+    height: 1px;
+    margin: 5px auto 30px; }
+    @media screen and (min-width: 1024px) {
+      .works .underline {
+        margin: 5px auto 30px; } }
+    @media screen and (min-width: 1025px) {
+      .works .underline {
+        width: 80%; } }
+    @media screen and (min-width: 1500px) {
+      .works .underline {
+        width: 70%; } }
+  .works .loop_css1 {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    width: 100vw;
+    overflow: hidden;
+    height: 19vh;
+    margin: 9px 0 0 0; }
+    @media screen and (max-width: 1024px) {
+      .works .loop_css1 {
+        width: 150vw;
+        height: 20vh; } }
+    @media screen and (max-width: 769px) {
+      .works .loop_css1 {
+        width: 150vw;
+        height: 18vh; } }
+    @media screen and (max-width: 600px) {
+      .works .loop_css1 {
+        width: 200vw;
+        height: 18vh; } }
+    @media screen and (max-width: 492px) {
+      .works .loop_css1 {
+        width: 300vw;
+        height: 18vh; } }
+    @media screen and (max-width: 415px) {
+      .works .loop_css1 {
+        width: 300vw;
+        height: 16vh; } }
+    @media screen and (max-width: 376px) {
+      .works .loop_css1 {
+        width: 300vw;
+        height: 16vh; } }
+    @media screen and (max-width: 361px) {
+      .works .loop_css1 {
+        width: 300vw;
+        height: 18vh; } }
+    @media screen and (max-width: 321px) {
+      .works .loop_css1 {
+        width: 300vw;
+        height: 16vh; } }
+    .works .loop_css1 ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+      .works .loop_css1 ul:first-child {
+        -webkit-animation: loop 50s -25s linear infinite;
+        animation: loop 50s -25s linear infinite;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: transform; }
+      .works .loop_css1 ul li {
+        display: inline-block;
+        width: calc(100vw / 2);
+        min-width: 150px;
+        list-style: none;
+        text-align: center;
+        margin: 0 9px 0 0; }
+        .works .loop_css1 ul li a {
+          display: block;
+          transition: 0.2s; }
+          .works .loop_css1 ul li a:hover {
+            opacity: .7;
+            transition: 0.2s; }
+        .works .loop_css1 ul li source,
+        .works .loop_css1 ul li img {
+          display: block;
+          width: 100%;
+          height: auto; }
+    .works .loop_css1 ul + ul {
+      -webkit-animation: loop2 50s linear infinite;
+      animation: loop2 50s linear infinite; }
+  .works .loop_css2 {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    width: 100vw;
+    overflow: hidden;
+    height: 19vh;
+    margin: 9px 0 0 0; }
+    @media screen and (max-width: 1024px) {
+      .works .loop_css2 {
+        width: 150vw;
+        height: 20vh; } }
+    @media screen and (max-width: 769px) {
+      .works .loop_css2 {
+        width: 150vw;
+        height: 18vh; } }
+    @media screen and (max-width: 600px) {
+      .works .loop_css2 {
+        width: 200vw;
+        height: 18vh; } }
+    @media screen and (max-width: 492px) {
+      .works .loop_css2 {
+        width: 300vw;
+        height: 18vh; } }
+    @media screen and (max-width: 415px) {
+      .works .loop_css2 {
+        width: 300vw;
+        height: 16vh; } }
+    @media screen and (max-width: 376px) {
+      .works .loop_css2 {
+        width: 300vw;
+        height: 16vh; } }
+    @media screen and (max-width: 361px) {
+      .works .loop_css2 {
+        width: 300vw;
+        height: 18vh; } }
+    @media screen and (max-width: 321px) {
+      .works .loop_css2 {
+        width: 300vw;
+        height: 16vh; } }
+    .works .loop_css2 ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+      .works .loop_css2 ul:first-child {
+        -webkit-animation: loop3 50s -25s linear infinite;
+        animation: loop3 50s -25s linear infinite;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        will-change: transform; }
+      .works .loop_css2 ul li {
+        display: inline-block;
+        width: calc(100vw / 2);
+        min-width: 150px;
+        list-style: none;
+        text-align: center;
+        margin: 0 9px 0 0; }
+        .works .loop_css2 ul li a {
+          display: block;
+          transition: 0.2s; }
+          .works .loop_css2 ul li a:hover {
+            opacity: .7;
+            transition: 0.2s; }
+        .works .loop_css2 ul li source,
+        .works .loop_css2 ul li img {
+          display: block;
+          width: 100%;
+          height: auto; }
+    .works .loop_css2 ul + ul {
+      -webkit-animation: loop4 50s linear infinite;
+      animation: loop4 50s linear infinite; }
+  .works .loop_css1:hover ul {
+    animation-play-state: paused; }
+  .works .loop_css2:hover ul {
+    animation-play-state: paused; }
+@-webkit-keyframes loop {
+  0% {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%); }
+  to {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+@keyframes loop {
+  0% {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%); }
+  to {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+@-webkit-keyframes loop2 {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  to {
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%); } }
+@keyframes loop2 {
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  to {
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%); } }
+@-webkit-keyframes loop3 {
+  0% {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  to {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%); } }
+@keyframes loop3 {
+  0% {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  to {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%); } }
+@-webkit-keyframes loop4 {
+  0% {
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%); }
+  to {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); } }
+@keyframes loop4 {
+  0% {
+    -webkit-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    transform: translateX(-200%); }
+  to {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); } }
+.no-webp .eyecatch {
+  background-image: url("img/eyecatch.jpg"); }
+
+.webp .eyecatch {
+  background-image: url("img/eyecatch.webp"); }
+
+.no-webp .cheap {
+  background-image: url("img/skillful.jpg"); }
+
+.webp .cheap {
+  background-image: url("img/skillful.webp"); }
+
+.no-webp .fast {
+  background-image: url("img/fast.jpg"); }
+
+.webp .fast {
+  background-image: url("img/fast.webp"); }
+
+.no-webp .skillful {
+  background-image: url("img/int.jpg"); }
+
+.webp .skillful {
+  background-image: url("img/int.webp"); }
+
+.no-webp .plan-subtitle-a {
+  background-image: url("img/aftercare.png"); }
+
+.webp .plan-subtitle-a {
+  background-image: url("img/aftercare.webp"); }
+
+.no-webp .HereIsMovie {
+  background-image: url("img/camera.jpg"); }
+
+.webp .HereIsMovie {
+  background-image: url("img/camera.webp"); }
+
+.eyecatch {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: -98;
+  opacity: 0.8;
+  position: fixed;
+  top: 0; }
+  .eyecatch p {
+    font-size: 10px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    left: 5%; }
+
+.concept {
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 64vh;
+  z-index: 0; }
+  @media screen and (min-width: 350px) {
+    .concept {
+      width: 90%;
+      margin: 68vh auto 0; } }
+  @media screen and (min-width: 500px) {
+    .concept {
+      width: 84%;
+      margin: 64vh 0 0 16%; } }
+  @media screen and (min-width: 600px) {
+    .concept {
+      width: 80%;
+      margin: 64vh 0 0 20%; } }
+  @media screen and (min-width: 767px) {
+    .concept {
+      width: 80%;
+      margin: 64vh 0 0 20%; } }
+  @media screen and (min-width: 834px) {
+    .concept {
+      margin: 66vh 0 0 20%; } }
+  @media screen and (min-width: 1025px) {
+    .concept {
+      margin: 55vh 0 0 20%; } }
+  @media screen and (min-width: 1280px) {
+    .concept {
+      margin: 50vh 0 0 20%; } }
+  @media screen and (min-width: 1440px) {
+    .concept {
+      width: 70%;
+      margin: 61vh 0 0 30%; } }
+  @media screen and (min-width: 2000px) {
+    .concept {
+      width: 70%;
+      margin: 70vh 0 0 30%; } }
+  .concept .container-concept {
+    width: 90%;
+    margin: 0 auto; }
+    @media screen and (min-width: 1025px) {
+      .concept .container-concept {
+        width: 80%; } }
+    .concept .container-concept h1 {
+      font-size: 85px;
+      text-align: center;
+      padding: 28px 0 0;
+      font-family: 'Poiret One', cursive;
+      font-weight: normal; }
+      @media screen and (min-width: 500px) {
+        .concept .container-concept h1 {
+          font-size: 100px;
+          padding: 40px 0 0; } }
+      @media screen and (min-width: 767px) {
+        .concept .container-concept h1 {
+          font-size: 120px;
+          padding: 60px 0 0; } }
+      @media screen and (min-width: 834px) {
+        .concept .container-concept h1 {
+          font-size: 146px;
+          padding: 60px 0 0; } }
+      @media screen and (min-width: 1100px) {
+        .concept .container-concept h1 {
+          font-size: 174px; } }
+    .concept .container-concept h2 {
+      text-align: center;
+      font-weight: lighter;
+      font-size: 14px;
+      line-height: 30px;
+      font-family: 'Noto Sans JP', sans-serif; }
+      @media screen and (min-width: 834px) {
+        .concept .container-concept h2 {
+          font-size: 24px; } }
+    .concept .container-concept h3 {
+      font-size: 25px;
+      margin: 70px 0 0; }
+      @media screen and (min-width: 500px) {
+        .concept .container-concept h3 {
+          margin: 82px 0 0; } }
+      @media screen and (min-width: 767px) {
+        .concept .container-concept h3 {
+          font-size: 45px;
+          margin: 102px 0 0; } }
+      @media screen and (min-width: 1024px) {
+        .concept .container-concept h3 {
+          padding: 30px 0 0; } }
+    .concept .container-concept .underline {
+      background-color: #4a3a3a;
+      width: 100%;
+      height: 1px;
+      margin: 5px 0 50px; }
+    .concept .container-concept h4 {
+      font-size: 25px;
+      text-align: center; }
+      @media screen and (min-width: 400px) {
+        .concept .container-concept h4 {
+          font-size: 30px; } }
+      @media screen and (min-width: 500px) {
+        .concept .container-concept h4 {
+          font-size: 35px; } }
+      @media screen and (min-width: 700px) {
+        .concept .container-concept h4 {
+          font-size: 50px;
+          line-height: 75px; } }
+  .concept .cheap {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    z-index: 95;
+    margin: 50px 0 0;
+    height: 500px; }
+    @media screen and (min-width: 500px) {
+      .concept .cheap {
+        height: 535px; } }
+    @media screen and (min-width: 834px) {
+      .concept .cheap {
+        height: 590px; } }
+    @media screen and (min-width: 1280px) {
+      .concept .cheap {
+        margin: 100px 0 0;
+        height: 720px; } }
+    .concept .cheap h4 {
+      font-size: 100px;
+      opacity: 0.65;
+      color: #ffffff;
+      position: absolute;
+      font-weight: lighter;
+      overflow: hidden;
+      top: -10px;
+      left: 2px; }
+      @media screen and (min-width: 500px) {
+        .concept .cheap h4 {
+          font-size: 140px; } }
+      @media screen and (min-width: 834px) {
+        .concept .cheap h4 {
+          font-size: 200px; } }
+      @media screen and (min-width: 1280px) {
+        .concept .cheap h4 {
+          font-size: 314px; } }
+    .concept .cheap p {
+      width: 90%;
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 26px; }
+      .concept .cheap p:nth-of-type(1) {
+        padding: 150px 0 0; }
+        @media screen and (min-width: 500px) {
+          .concept .cheap p:nth-of-type(1) {
+            padding: 190px 0 0; } }
+        @media screen and (min-width: 834px) {
+          .concept .cheap p:nth-of-type(1) {
+            padding: 250px 0 0; } }
+        @media screen and (min-width: 1280px) {
+          .concept .cheap p:nth-of-type(1) {
+            padding: 360px 0 0; } }
+      .concept .cheap p:nth-of-type(2) {
+        margin: 35px auto 0; }
+      @media screen and (min-width: 500px) {
+        .concept .cheap p {
+          font-size: 16px;
+          line-height: 30px; } }
+      @media screen and (min-width: 1100px) {
+        .concept .cheap p {
+          width: 80%; } }
+      @media screen and (min-width: 1280px) {
+        .concept .cheap p {
+          font-size: 26px;
+          line-height: 50px; } }
+      @media screen and (min-width: 834px) {
+        .concept .cheap p {
+          font-size: 20px;
+          line-height: 40px; } }
+  .concept .fast {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    z-index: 94;
+    height: 340px; }
+    @media screen and (min-width: 500px) {
+      .concept .fast {
+        height: 370px; } }
+    @media screen and (min-width: 834px) {
+      .concept .fast {
+        height: 470px; } }
+    @media screen and (min-width: 1280px) {
+      .concept .fast {
+        height: 620px; } }
+    .concept .fast h4 {
+      font-size: 100px;
+      opacity: 0.65;
+      color: #ffffff;
+      position: absolute;
+      font-weight: lighter;
+      overflow: hidden;
+      top: -10px;
+      right: 0px; }
+      @media screen and (min-width: 500px) {
+        .concept .fast h4 {
+          font-size: 140px; } }
+      @media screen and (min-width: 834px) {
+        .concept .fast h4 {
+          font-size: 200px; } }
+      @media screen and (min-width: 1280px) {
+        .concept .fast h4 {
+          font-size: 314px; } }
+    .concept .fast p {
+      width: 90%;
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 26px; }
+      .concept .fast p:nth-of-type(1) {
+        padding: 150px 0 0; }
+        @media screen and (min-width: 500px) {
+          .concept .fast p:nth-of-type(1) {
+            padding: 190px 0 0; } }
+        @media screen and (min-width: 834px) {
+          .concept .fast p:nth-of-type(1) {
+            padding: 250px 0 0; } }
+        @media screen and (min-width: 1280px) {
+          .concept .fast p:nth-of-type(1) {
+            padding: 360px 0 0; } }
+      .concept .fast p:nth-of-type(2) {
+        margin: 35px auto 0; }
+      @media screen and (min-width: 500px) {
+        .concept .fast p {
+          font-size: 16px;
+          line-height: 30px; } }
+      @media screen and (min-width: 1100px) {
+        .concept .fast p {
+          width: 80%; } }
+      @media screen and (min-width: 1280px) {
+        .concept .fast p {
+          font-size: 26px;
+          line-height: 50px; } }
+      @media screen and (min-width: 834px) {
+        .concept .fast p {
+          font-size: 20px;
+          line-height: 40px;
+          text-align: right; } }
+  .concept .skillful {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    z-index: 93;
+    height: 580px; }
+    @media screen and (min-width: 500px) {
+      .concept .skillful {
+        height: 650px; } }
+    @media screen and (min-width: 767px) {
+      .concept .skillful {
+        height: 650px; } }
+    @media screen and (min-width: 834px) {
+      .concept .skillful {
+        height: 750px; } }
+    @media screen and (min-width: 1280px) {
+      .concept .skillful {
+        height: 850px; } }
+    .concept .skillful h4 {
+      font-size: 100px;
+      opacity: 0.65;
+      color: #ffffff;
+      position: absolute;
+      font-weight: lighter;
+      overflow: hidden;
+      top: -10px; }
+      @media screen and (min-width: 500px) {
+        .concept .skillful h4 {
+          font-size: 140px; } }
+      @media screen and (min-width: 834px) {
+        .concept .skillful h4 {
+          font-size: 200px; } }
+      @media screen and (min-width: 1280px) {
+        .concept .skillful h4 {
+          font-size: 314px; } }
+    .concept .skillful p {
+      width: 90%;
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 26px; }
+      .concept .skillful p:nth-of-type(1) {
+        padding: 150px 0 0; }
+        @media screen and (min-width: 500px) {
+          .concept .skillful p:nth-of-type(1) {
+            padding: 190px 0 0; } }
+        @media screen and (min-width: 834px) {
+          .concept .skillful p:nth-of-type(1) {
+            padding: 250px 0 0; } }
+        @media screen and (min-width: 1280px) {
+          .concept .skillful p:nth-of-type(1) {
+            padding: 360px 0 0; } }
+      .concept .skillful p:nth-of-type(2) {
+        margin: 35px auto 0; }
+      @media screen and (min-width: 500px) {
+        .concept .skillful p {
+          font-size: 16px;
+          line-height: 30px; } }
+      @media screen and (min-width: 1100px) {
+        .concept .skillful p {
+          width: 80%; } }
+      @media screen and (min-width: 1280px) {
+        .concept .skillful p {
+          font-size: 26px;
+          line-height: 50px; } }
+      @media screen and (min-width: 834px) {
+        .concept .skillful p {
+          font-size: 20px;
+          line-height: 40px; } }
+
+.andmore {
+  background-color: #3C0000;
+  width: 100%;
+  height: 650px;
+  z-index: 95;
+  position: relative;
+  display: block; }
+  @media screen and (min-width: 350px) {
+    .andmore {
+      width: 90%;
+      margin: -30px auto 0; } }
+  @media screen and (min-width: 415px) {
+    .andmore {
+      height: 600px; } }
+  @media screen and (min-width: 500px) {
+    .andmore {
+      width: 84%;
+      margin: -60px 16% 0 0;
+      height: 650px; } }
+  @media screen and (min-width: 600px) {
+    .andmore {
+      width: 76%;
+      margin: -60px 20% 0 0; } }
+  @media screen and (min-width: 650px) {
+    .andmore {
+      width: 70%; } }
+  @media screen and (min-width: 767px) {
+    .andmore {
+      margin: -90px 30% 0 0;
+      height: 700px; } }
+  @media screen and (min-width: 834px) {
+    .andmore {
+      height: 900px; } }
+  @media screen and (min-width: 1100px) {
+    .andmore {
+      width: 65%;
+      margin: -90px 30% 0 5%; } }
+  @media screen and (min-width: 1280px) {
+    .andmore {
+      height: 950px; } }
+  @media screen and (min-width: 1500px) {
+    .andmore {
+      width: 60%;
+      margin: -90px 35% 0 5%; } }
+  .andmore h4,
+  .andmore p {
+    color: #ffffff;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 24px; }
+    @media screen and (min-width: 500px) {
+      .andmore h4,
+      .andmore p {
+        line-height: 30px; } }
+    @media screen and (min-width: 1024px) {
+      .andmore h4,
+      .andmore p {
+        width: 80%; } }
+  .andmore h4 {
+    font-size: 25px;
+    padding: 31px 0 31px; }
+    @media screen and (min-width: 500px) {
+      .andmore h4 {
+        font-size: 30px;
+        padding: 50px 0 30px; } }
+    @media screen and (min-width: 767px) {
+      .andmore h4 {
+        font-size: 40px;
+        padding: 70px 0 50px; } }
+    @media screen and (min-width: 834px) {
+      .andmore h4 {
+        font-size: 50px;
+        padding: 70px 0 70px; } }
+    @media screen and (min-width: 1280px) {
+      .andmore h4 {
+        padding: 100px 0 70px; } }
+  .andmore p:nth-of-type(1),
+  .andmore p:nth-of-type(3) {
+    font-size: 16px; }
+    @media screen and (min-width: 500px) {
+      .andmore p:nth-of-type(1),
+      .andmore p:nth-of-type(3) {
+        font-size: 18px; } }
+    @media screen and (min-width: 834px) {
+      .andmore p:nth-of-type(1),
+      .andmore p:nth-of-type(3) {
+        font-size: 24px;
+        line-height: 40px; } }
+  .andmore p:nth-of-type(2),
+  .andmore p:nth-of-type(4),
+  .andmore p:nth-of-type(5) {
+    margin: 35px auto 0;
+    font-size: 14px; }
+    @media screen and (min-width: 500px) {
+      .andmore p:nth-of-type(2),
+      .andmore p:nth-of-type(4),
+      .andmore p:nth-of-type(5) {
+        font-size: 16px;
+        line-height: 30px; } }
+    @media screen and (min-width: 834px) {
+      .andmore p:nth-of-type(2),
+      .andmore p:nth-of-type(4),
+      .andmore p:nth-of-type(5) {
+        font-size: 20px;
+        line-height: 40px; } }
+  .andmore p:nth-of-type(3) {
+    margin: 35px auto 0; }
+
+.pickup {
+  width: 100%;
+  background-color: #ffffff; }
+  @media screen and (min-width: 350px) {
+    .pickup {
+      margin: 30px 0 0; } }
+  @media screen and (min-width: 500px) {
+    .pickup {
+      margin: 60px 0 0px; } }
+  @media screen and (min-width: 767px) {
+    .pickup {
+      margin: 100px 0 0px; } }
+  @media screen and (min-width: 1024px) {
+    .pickup {
+      margin: 150px 0 0px; } }
+  .pickup .pickup-container {
+    padding: 50px 5% 50px; }
+    @media screen and (min-width: 600px) {
+      .pickup .pickup-container .posts {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+      .pickup .pickup-container .posta {
+        width: 48%; }
+        .pickup .pickup-container .posta picture source,
+        .pickup .pickup-container .posta picture img {
+          height: 180px; }
+      .pickup .pickup-container .postb {
+        width: 48%; }
+        .pickup .pickup-container .postb picture source,
+        .pickup .pickup-container .postb picture img {
+          height: 180px; } }
+    @media screen and (min-width: 767px) {
+      .pickup .pickup-container {
+        padding: 70px 5% 70px; }
+        .pickup .pickup-container .post1 picture source,
+        .pickup .pickup-container .post1 picture img {
+          height: 220px; } }
+    @media screen and (min-width: 834px) {
+      .pickup .pickup-container .post1 picture source,
+      .pickup .pickup-container .post1 picture img {
+        height: 240px; } }
+    @media screen and (min-width: 1024px) {
+      .pickup .pickup-container {
+        padding: 70px 10% 70px; } }
+    @media screen and (min-width: 1025px) {
+      .pickup .pickup-container .post1 picture source,
+      .pickup .pickup-container .post1 picture img {
+        height: 260px; } }
+    @media screen and (min-width: 1280px) {
+      .pickup .pickup-container .posta {
+        width: 32%; }
+        .pickup .pickup-container .posta picture source,
+        .pickup .pickup-container .posta picture img {
+          height: 220px; }
+      .pickup .pickup-container .postb {
+        width: 32%; }
+        .pickup .pickup-container .postb picture source,
+        .pickup .pickup-container .postb picture img {
+          height: 220px; } }
+    @media screen and (min-width: 2000px) {
+      .pickup .pickup-container .posta {
+        width: 32%; }
+        .pickup .pickup-container .posta picture source,
+        .pickup .pickup-container .posta picture img {
+          height: 350px; }
+      .pickup .pickup-container .postb {
+        width: 32%; }
+        .pickup .pickup-container .postb picture source,
+        .pickup .pickup-container .postb picture img {
+          height: 350px; } }
+    @media screen and (min-width: 1500px) {
+      .pickup .pickup-container {
+        padding: 70px 15% 70px; } }
+    .pickup .pickup-container h3 {
+      font-size: 25px; }
+      @media screen and (min-width: 767px) {
+        .pickup .pickup-container h3 {
+          font-size: 45px; } }
+      @media screen and (min-width: 1024px) {
+        .pickup .pickup-container h3 {
+          padding: 30px 0 0; } }
+    .pickup .pickup-container .underline {
+      background-color: #4a3a3a;
+      width: 100%;
+      height: 1px;
+      margin: 5px 0 30px; }
+      @media screen and (min-width: 834px) {
+        .pickup .pickup-container .underline {
+          margin: 5px 0 50px; } }
+    .pickup .pickup-container p {
+      margin: 0 0 30px;
+      font-size: 18px;
+      line-height: 30px; }
+      @media screen and (min-width: 834px) {
+        .pickup .pickup-container p {
+          font-size: 24px;
+          line-height: 40px; } }
+    .pickup .pickup-container a {
+      width: 100%;
+      display: block;
+      position: relative;
+      margin: 0 0 10px;
+      transition: 0.2s; }
+      .pickup .pickup-container a:hover {
+        opacity: 0.7;
+        transition: 0.2s; }
+      .pickup .pickup-container a picture source,
+      .pickup .pickup-container a picture img {
+        width: 100%;
+        height: 160px; }
+        @media screen and (min-width: 350px) {
+          .pickup .pickup-container a picture source,
+          .pickup .pickup-container a picture img {
+            height: 195px; } }
+        @media screen and (min-width: 410px) {
+          .pickup .pickup-container a picture source,
+          .pickup .pickup-container a picture img {
+            height: 260px; } }
+        @media screen and (min-width: 600px) {
+          .pickup .pickup-container a picture source,
+          .pickup .pickup-container a picture img {
+            height: 300px; } }
+      .pickup .pickup-container a .post-back {
+        background-color: #ffffff;
+        height: 60px;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        opacity: 0.8; }
+        @media screen and (min-width: 410px) {
+          .pickup .pickup-container a .post-back {
+            height: 80px; } }
+        .pickup .pickup-container a .post-back p {
+          position: absolute;
+          top: 0;
+          font-size: 16px;
+          width: 90%;
+          left: 5%;
+          line-height: 25px;
+          margin: 5px 0; }
+          @media screen and (min-width: 410px) {
+            .pickup .pickup-container a .post-back p {
+              line-height: 30px;
+              margin: 10px 0; } }
+          @media screen and (min-width: 500px) {
+            .pickup .pickup-container a .post-back p {
+              font-size: 18px; } }
+          @media screen and (min-width: 834px) {
+            .pickup .pickup-container a .post-back p {
+              font-size: 20px; } }
+    .pickup .pickup-container .more-button1 {
+      width: 140px;
+      height: 34px;
+      border-radius: 17px;
+      margin: 30px auto 0;
+      background-color: #F8B869; }
+      @media screen and (min-width: 500px) {
+        .pickup .pickup-container .more-button1 {
+          width: 170px;
+          height: 40px;
+          border-radius: 20px;
+          margin: 40px auto 0; } }
+      @media screen and (min-width: 767px) {
+        .pickup .pickup-container .more-button1 {
+          width: 200px;
+          height: 50px;
+          border-radius: 25px;
+          margin: 50px auto 0; } }
+      .pickup .pickup-container .more-button1 a {
+        display: block;
+        line-height: 34px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff; }
+        @media screen and (min-width: 500px) {
+          .pickup .pickup-container .more-button1 a {
+            line-height: 40px;
+            font-size: 18px; } }
+        @media screen and (min-width: 767px) {
+          .pickup .pickup-container .more-button1 a {
+            line-height: 50px;
+            font-size: 20px; } }
+
+.empty-element {
+  position: relative; }
+
+.under-element {
+  position: absolute;
+  top: 115vh; }
+
+.interview {
+  width: 100%;
+  background-color: #ffffff; }
+  @media screen and (min-width: 350px) {
+    .interview {
+      margin: 0 0 30px; } }
+  @media screen and (min-width: 500px) {
+    .interview {
+      margin: 0 0 60px; } }
+  @media screen and (min-width: 767px) {
+    .interview {
+      margin: 0 0 100px; } }
+  @media screen and (min-width: 1024px) {
+    .interview {
+      margin: 0 0 150px; } }
+  .interview .interview-container {
+    padding: 50px 5% 50px; }
+    @media screen and (min-width: 767px) {
+      .interview .interview-container {
+        padding: 70px 5% 70px; } }
+    @media screen and (min-width: 1024px) {
+      .interview .interview-container {
+        padding: 70px 10% 70px; } }
+    @media screen and (min-width: 1500px) {
+      .interview .interview-container {
+        padding: 70px 15% 70px; } }
+    .interview .interview-container h3 {
+      font-size: 25px; }
+      @media screen and (min-width: 767px) {
+        .interview .interview-container h3 {
+          font-size: 45px; } }
+      @media screen and (min-width: 1024px) {
+        .interview .interview-container h3 {
+          padding: 30px 0 0; } }
+    .interview .interview-container .underline {
+      background-color: #4a3a3a;
+      width: 100%;
+      height: 1px;
+      margin: 5px 0 50px; }
+      @media screen and (min-width: 1280px) {
+        .interview .interview-container .underline {
+          margin: 5px 0 64px; } }
+    .interview .interview-container .interview-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      @media screen and (min-width: 500px) {
+        .interview .interview-container .interview-flex .margin-need {
+          margin-top: 30px; } }
+      @media screen and (min-width: 767px) {
+        .interview .interview-container .interview-flex .margin-need {
+          margin: 0; }
+        .interview .interview-container .interview-flex .margin-need-after {
+          margin-top: 30px; } }
+      .interview .interview-container .interview-flex .interview-common {
+        width: 100%;
+        height: 280px;
+        background-position: center;
+        background-size: cover;
+        margin-top: 15px; }
+        @media screen and (min-width: 350px) {
+          .interview .interview-container .interview-flex .interview-common {
+            height: 260px; } }
+        @media screen and (min-width: 500px) {
+          .interview .interview-container .interview-flex .interview-common {
+            width: 48%;
+            margin-top: 15px;
+            height: 340px; } }
+        @media screen and (min-width: 695px) {
+          .interview .interview-container .interview-flex .interview-common {
+            height: 300px; } }
+        @media screen and (min-width: 767px) {
+          .interview .interview-container .interview-flex .interview-common {
+            width: 32%;
+            height: 340px; } }
+        @media screen and (min-width: 834px) {
+          .interview .interview-container .interview-flex .interview-common {
+            height: 600px; } }
+        @media screen and (min-width: 1280px) {
+          .interview .interview-container .interview-flex .interview-common {
+            height: 500px; } }
+        .interview .interview-container .interview-flex .interview-common h4 {
+          width: 90%;
+          line-height: 36px;
+          font-size: 18px;
+          margin: 30px auto 0; }
+          @media screen and (min-width: 834px) {
+            .interview .interview-container .interview-flex .interview-common h4 {
+              font-size: 26px;
+              line-height: 48px;
+              height: 96px; } }
+        .interview .interview-container .interview-flex .interview-common p {
+          width: 90%;
+          margin: 15px auto;
+          font-size: 14px;
+          line-height: 26px; }
+          @media screen and (min-width: 834px) {
+            .interview .interview-container .interview-flex .interview-common p {
+              font-size: 20px;
+              line-height: 40px; } }
+      .interview .interview-container .interview-flex .interview1 {
+        background-image: url("img/int1.jpg"); }
+      .interview .interview-container .interview-flex .interview2 {
+        background-image: url("img/int2.jpg"); }
+      .interview .interview-container .interview-flex .interview3 {
+        background-image: url("img/int3.jpg"); }
+      .interview .interview-container .interview-flex .interview4 {
+        background-image: url("img/int4.jpg"); }
+      .interview .interview-container .interview-flex .interview5 {
+        background-image: url("img/int5.jpg"); }
+      .interview .interview-container .interview-flex .interview6 {
+        background-image: url("img/int6.jpg"); }
+
+.plan {
+  width: 100%;
+  background-color: #eee; }
+  @media screen and (min-width: 350px) {
+    .plan {
+      width: 90%;
+      margin: 0 auto;
+      background-color: #ffffff; } }
+  @media screen and (min-width: 500px) {
+    .plan {
+      width: 84%;
+      margin: 0 0 0 16%; } }
+  @media screen and (min-width: 1500px) {
+    .plan {
+      width: 74%;
+      margin: 0 0 0 26%; } }
+  .plan .plan-container {
+    padding: 50px 5%; }
+    @media screen and (min-width: 768px) {
+      .plan .plan-container {
+        padding: 80px 5%; } }
+    @media screen and (min-width: 1024px) {
+      .plan .plan-container {
+        padding: 80px 10%; } }
+    .plan .plan-container h3 {
+      font-size: 25px; }
+      @media screen and (min-width: 768px) {
+        .plan .plan-container h3 {
+          font-size: 45px; } }
+      @media screen and (min-width: 1024px) {
+        .plan .plan-container h3 {
+          padding: 30px 0 0; } }
+    .plan .plan-container .underline {
+      background-color: #4a3a3a;
+      width: 100%;
+      height: 1px;
+      margin: 5px 0 50px; }
+      @media screen and (min-width: 1280px) {
+        .plan .plan-container .underline {
+          margin: 5px 0 64px; } }
+    .plan .plan-container .stprA {
+      font-size: 16px;
+      line-height: 26px; }
+      @media screen and (min-width: 768px) {
+        .plan .plan-container .stprA {
+          font-size: 24px;
+          line-height: 40px; } }
+    .plan .plan-container .web-cost {
+      background-color: #D36837;
+      width: 100%;
+      height: 50px;
+      margin: 21px 0; }
+      @media screen and (min-width: 768px) {
+        .plan .plan-container .web-cost {
+          margin: 45px 0;
+          height: 80px; } }
+      .plan .plan-container .web-cost p {
+        text-align: center;
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 50px; }
+        @media screen and (min-width: 768px) {
+          .plan .plan-container .web-cost p {
+            line-height: 80px;
+            font-size: 24px; } }
+    .plan .plan-container .equal {
+      background-image: url("img/equal.png");
+      background-size: cover;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+      margin: 16px auto; }
+      @media screen and (min-width: 768px) {
+        .plan .plan-container .equal {
+          width: 50px;
+          height: 50px;
+          margin: 21px auto; } }
+      @media screen and (min-width: 1280px) {
+        .plan .plan-container .equal {
+          width: 70px;
+          height: 70px;
+          margin: 30px auto; } }
+    .plan .plan-container .web-cost-element {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 21px 0 0; }
+      @media screen and (min-width: 768px) {
+        .plan .plan-container .web-cost-element {
+          margin: 45px 0 0; } }
+      .plan .plan-container .web-cost-element .web-cost-each {
+        width: 50%;
+        background-size: cover;
+        background-position: center; }
+        .plan .plan-container .web-cost-element .web-cost-each .web-cost-title {
+          padding: 21px 5% 0;
+          text-align: center;
+          color: #ffffff;
+          font-size: 16px; }
+          @media screen and (min-width: 768px) {
+            .plan .plan-container .web-cost-element .web-cost-each .web-cost-title {
+              padding: 45px 5% 0;
+              font-size: 24px; } }
+        .plan .plan-container .web-cost-element .web-cost-each .web-cost-desc {
+          padding: 21px 5%;
+          color: #ffffff;
+          font-size: 12px;
+          line-height: 20px; }
+          @media screen and (min-width: 768px) {
+            .plan .plan-container .web-cost-element .web-cost-each .web-cost-desc {
+              padding: 45px 5%;
+              color: #ffffff;
+              font-size: 16px;
+              line-height: 26px; } }
+      .plan .plan-container .web-cost-element .web-cost-ele1 {
+        background-image: url("img/pel1.jpg"); }
+      .plan .plan-container .web-cost-element .web-cost-ele2 {
+        background-image: url("img/pel2.jpg"); }
+      .plan .plan-container .web-cost-element .web-cost-ele3 {
+        background-image: url("img/pel3.jpg"); }
+      .plan .plan-container .web-cost-element .web-cost-ele4 {
+        background-image: url("img/pel4.jpg"); }
+    .plan .plan-container .aftercare-cost {
+      width: 100%;
+      margin: 0 0 50px;
+      height: 50px;
+      background-size: cover;
+      background-position: center;
+      background-image: url("img/pel5.jpg"); }
+      @media screen and (min-width: 768px) {
+        .plan .plan-container .aftercare-cost {
+          margin: 0 0 80px;
+          height: 80px; } }
+      .plan .plan-container .aftercare-cost p {
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center; }
+        @media screen and (min-width: 768px) {
+          .plan .plan-container .aftercare-cost p {
+            font-size: 24px;
+            line-height: 80px; } }
+  @media screen and (min-width: 768px) {
+    .plan .plan-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
+  .plan .plan-footer .cost-attention {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 21px 0; }
+    @media screen and (min-width: 768px) {
+      .plan .plan-footer .cost-attention {
+        font-size: 18px;
+        line-height: 32px;
+        margin: 45px 0 0;
+        width: 48%; } }
+    @media screen and (min-width: 1025px) {
+      .plan .plan-footer .cost-attention {
+        width: 56%; } }
+  .plan .plan-footer .quote-article {
+    display: block;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url("img/calc.jpg"); }
+    @media screen and (min-width: 768px) {
+      .plan .plan-footer .quote-article {
+        margin: 50px 0 0;
+        width: 48%;
+        height: 200px; } }
+    @media screen and (min-width: 1025px) {
+      .plan .plan-footer .quote-article {
+        width: 40%; } }
+    .plan .plan-footer .quote-article .quote-article-bg {
+      width: 100%;
+      height: 50px;
+      background-color: #ffffff;
+      opacity: 0.8;
+      position: absolute;
+      bottom: 0; }
+      @media screen and (min-width: 768px) {
+        .plan .plan-footer .quote-article .quote-article-bg {
+          height: 80px; } }
+      .plan .plan-footer .quote-article .quote-article-bg p {
+        line-height: 25px;
+        font-size: 16px;
+        width: 90%;
+        margin: 0 auto; }
+        @media screen and (min-width: 768px) {
+          .plan .plan-footer .quote-article .quote-article-bg p {
+            line-height: 32px;
+            font-size: 18px; } }
+
+.order-flow {
+  width: 100%;
+  background-color: #380000; }
+  @media screen and (min-width: 350px) {
+    .order-flow {
+      width: 90%;
+      margin: 0 auto; } }
+  @media screen and (min-width: 500px) {
+    .order-flow {
+      width: 84%;
+      margin: 0 0 0 16%; } }
+  @media screen and (min-width: 1500px) {
+    .order-flow {
+      width: 74%;
+      margin: 0 0 0 26%; } }
+  .order-flow .order-flow-container {
+    padding: 50px 5%; }
+    @media screen and (min-width: 500px) {
+      .order-flow .order-flow-container {
+        padding: 50px 5% 100px; } }
+    @media screen and (min-width: 768px) {
+      .order-flow .order-flow-container {
+        padding: 70px 5% 150px; } }
+    @media screen and (min-width: 1024px) {
+      .order-flow .order-flow-container {
+        padding: 70px 10% 150px; } }
+    .order-flow .order-flow-container h3 {
+      font-size: 25px;
+      color: #ffffff; }
+      @media screen and (min-width: 767px) {
+        .order-flow .order-flow-container h3 {
+          font-size: 45px; } }
+      @media screen and (min-width: 1024px) {
+        .order-flow .order-flow-container h3 {
+          padding: 30px 0 0; } }
+    .order-flow .order-flow-container .underline {
+      background-color: #ffffff;
+      width: 100%;
+      height: 1px;
+      margin: 5px 0 50px; }
+      @media screen and (min-width: 1280px) {
+        .order-flow .order-flow-container .underline {
+          margin: 5px 0 64px; } }
+    .order-flow .order-flow-container i {
+      font-size: 40px;
+      color: #ffffff;
+      margin: 0 auto; }
+    .order-flow .order-flow-container .under-go {
+      width: 0px;
+      margin: 10px auto;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 10px solid #ffffff; }
+    .order-flow .order-flow-container .process {
+      width: 100%;
+      height: 80px;
+      background-color: #ffffff; }
+      @media screen and (min-width: 834px) {
+        .order-flow .order-flow-container .process {
+          height: 120px; } }
+      .order-flow .order-flow-container .process p {
+        text-align: center;
+        font-size: 18px;
+        padding: 25px 0 0; }
+        .order-flow .order-flow-container .process p:nth-of-type(2) {
+          text-align: center;
+          font-size: 12px;
+          padding: 0;
+          width: 90%;
+          margin: 10px auto 0; }
+          @media screen and (min-width: 834px) {
+            .order-flow .order-flow-container .process p:nth-of-type(2) {
+              font-size: 16px; } }
+        @media screen and (min-width: 600px) {
+          .order-flow .order-flow-container .process p {
+            font-size: 20px; } }
+        @media screen and (min-width: 834px) {
+          .order-flow .order-flow-container .process p {
+            font-size: 28px;
+            padding: 32px 0 0; } }
+        @media screen and (min-width: 1280px) {
+          .order-flow .order-flow-container .process p {
+            font-size: 32px; } }
+    .order-flow .order-flow-container .processA p {
+      line-height: 80px;
+      padding: 0; }
+      @media screen and (min-width: 834px) {
+        .order-flow .order-flow-container .processA p {
+          line-height: 120px; } }
+  .order-flow .more-button {
+    width: 140px;
+    height: 34px;
+    border-radius: 17px;
+    margin: 30px auto 0;
+    background-color: #F8B869; }
+    @media screen and (min-width: 500px) {
+      .order-flow .more-button {
+        width: 170px;
+        height: 40px;
+        border-radius: 20px;
+        margin: 40px auto 0; } }
+    @media screen and (min-width: 768px) {
+      .order-flow .more-button {
+        width: 200px;
+        height: 50px;
+        border-radius: 25px;
+        margin: 50px auto 0; } }
+    .order-flow .more-button a {
+      display: block;
+      line-height: 34px;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff; }
+      @media screen and (min-width: 500px) {
+        .order-flow .more-button a {
+          line-height: 40px;
+          font-size: 18px; } }
+      @media screen and (min-width: 767px) {
+        .order-flow .more-button a {
+          line-height: 50px;
+          font-size: 20px; } }
+
+.contact {
+  width: 100%;
+  background-color: #003C09; }
+  @media screen and (min-width: 350px) {
+    .contact {
+      width: 90%;
+      margin: -30px auto 0; } }
+  @media screen and (min-width: 500px) {
+    .contact {
+      width: 78%;
+      margin: -60px 11% 0 0; } }
+  @media screen and (min-width: 600px) {
+    .contact {
+      width: 70%; } }
+  @media screen and (min-width: 767px) {
+    .contact {
+      margin: -90px 15% 0 0; } }
+  @media screen and (min-width: 1500px) {
+    .contact {
+      width: 60%;
+      margin: -90px 20% 0 0; } }
+  .contact .contact-container {
+    padding: 50px 5%; }
+    @media screen and (min-width: 767px) {
+      .contact .contact-container {
+        padding: 70px 5% 70px; } }
+    @media screen and (min-width: 1024px) {
+      .contact .contact-container {
+        padding: 70px 10% 70px; } }
+    .contact .contact-container h3 {
+      font-size: 25px;
+      color: #ffffff; }
+      @media screen and (min-width: 767px) {
+        .contact .contact-container h3 {
+          font-size: 45px; } }
+      @media screen and (min-width: 1024px) {
+        .contact .contact-container h3 {
+          padding: 30px 0 0; } }
+    .contact .contact-container .underline {
+      background-color: #ffffff;
+      width: 100%;
+      height: 1px;
+      margin: 5px 0 50px; }
+      @media screen and (min-width: 1280px) {
+        .contact .contact-container .underline {
+          margin: 5px 0 64px; } }
+    .contact .contact-container p {
+      color: #ffffff;
+      line-height: 26px; }
+      @media screen and (min-width: 500px) {
+        .contact .contact-container p {
+          line-height: 30px; } }
+    .contact .contact-container .contact-p-1,
+    .contact .contact-container .contact-p-3 {
+      font-size: 18px; }
+      @media screen and (min-width: 500px) {
+        .contact .contact-container .contact-p-1,
+        .contact .contact-container .contact-p-3 {
+          font-size: 20px; } }
+      @media screen and (min-width: 834px) {
+        .contact .contact-container .contact-p-1,
+        .contact .contact-container .contact-p-3 {
+          font-size: 24px;
+          line-height: 40px; } }
+      @media screen and (min-width: 1280px) {
+        .contact .contact-container .contact-p-1,
+        .contact .contact-container .contact-p-3 {
+          line-height: 60px;
+          font-size: 32px; } }
+    .contact .contact-container .contact-p-2,
+    .contact .contact-container .contact-p-4,
+    .contact .contact-container .contact-p-5,
+    .contact .contact-container .contact-p-6,
+    .contact .contact-container .contact-p-7 {
+      font-size: 14px; }
+      @media screen and (min-width: 500px) {
+        .contact .contact-container .contact-p-2,
+        .contact .contact-container .contact-p-4,
+        .contact .contact-container .contact-p-5,
+        .contact .contact-container .contact-p-6,
+        .contact .contact-container .contact-p-7 {
+          font-size: 16px; } }
+      @media screen and (min-width: 834px) {
+        .contact .contact-container .contact-p-2,
+        .contact .contact-container .contact-p-4,
+        .contact .contact-container .contact-p-5,
+        .contact .contact-container .contact-p-6,
+        .contact .contact-container .contact-p-7 {
+          font-size: 20px;
+          line-height: 40px; } }
+    @media screen and (min-width: 1280px) {
+      .contact .contact-container .contact-p-5,
+      .contact .contact-container .contact-p-6,
+      .contact .contact-container .contact-p-7 {
+        font-size: 24px; } }
+    .contact .contact-container .contact-p-1 {
+      margin: 0 0 15px 0; }
+    .contact .contact-container .contact-p-2 {
+      margin: 0 0 25px 0; }
+    .contact .contact-container .line-add,
+    .contact .contact-container .mail-send {
+      width: 100%;
+      height: 50px;
+      cursor: pointer; }
+      @media screen and (min-width: 800px) {
+        .contact .contact-container .line-add,
+        .contact .contact-container .mail-send {
+          width: 48%; } }
+      .contact .contact-container .line-add p,
+      .contact .contact-container .mail-send p {
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center; }
+        @media screen and (min-width: 500px) {
+          .contact .contact-container .line-add p,
+          .contact .contact-container .mail-send p {
+            font-size: 20px; } }
+        @media screen and (min-width: 800px) {
+          .contact .contact-container .line-add p,
+          .contact .contact-container .mail-send p {
+            font-size: 16px; } }
+        @media screen and (min-width: 1280px) {
+          .contact .contact-container .line-add p,
+          .contact .contact-container .mail-send p {
+            font-size: 20px; } }
+      .contact .contact-container .line-add a,
+      .contact .contact-container .mail-send a {
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        color: #ffffff;
+        display: block;
+        text-decoration: none; }
+        @media screen and (min-width: 500px) {
+          .contact .contact-container .line-add a,
+          .contact .contact-container .mail-send a {
+            font-size: 20px; } }
+        @media screen and (min-width: 800px) {
+          .contact .contact-container .line-add a,
+          .contact .contact-container .mail-send a {
+            font-size: 16px; } }
+        @media screen and (min-width: 1280px) {
+          .contact .contact-container .line-add a,
+          .contact .contact-container .mail-send a {
+            font-size: 20px; } }
+    .contact .contact-container .line-add {
+      background-color: #04C300;
+      margin: 0 0 15px 0; }
+    .contact .contact-container .mail-send {
+      background-color: #66CCFF;
+      margin: 0 0 35px 0; }
+    @media screen and (min-width: 800px) {
+      .contact .contact-container .contact-add {
+        display: flex;
+        justify-content: space-between; } }
+    .contact .contact-container .contact-p-3 {
+      margin: 0 0 15px 0; }
+    .contact .contact-container .contact-p-4 {
+      margin: 0 0 25px 0; }
+    .contact .contact-container textarea {
+      width: 100%; }
+    .contact .contact-container .send-button {
+      width: 100px;
+      height: 30px;
+      border: 1px #ffffff solid;
+      border-radius: 15px;
+      margin: 20px 0 0 auto;
+      background-color: #ffffff;
+      transition: 0.2s;
+      font-family: 'Noto Serif JP', serif;
+      color: #4a3a3a;
+      display: block;
+      line-height: 30px;
+      text-align: center;
+      text-decoration: none; }
+      @media screen and (min-width: 500px) {
+        .contact .contact-container .send-button {
+          font-size: 20px; } }
+      @media screen and (min-width: 834px) {
+        .contact .contact-container .send-button {
+          width: 140px;
+          height: 40px;
+          border-radius: 20px;
+          font-size: 24px;
+          line-height: 40px; } }
+    .contact .contact-container .send-button:hover {
+      transition: 0.2s;
+      opacity: 0.7; }
+
+.footer {
+  background-color: #ffffff;
+  width: 100%;
+  height: 150px;
+  margin: 72px 0 30px 0;
+  position: relative; }
+  @media screen and (min-width: 500px) {
+    .footer {
+      margin: 100px 0 30px 0;
+      height: 230px; } }
+  @media screen and (min-width: 600px) {
+    .footer {
+      height: 280px;
+      margin: 130px 0 30px 0; } }
+  @media screen and (min-width: 1100px) {
+    .footer {
+      height: 360px; } }
+  .footer .sns-icon {
+    display: flex;
+    width: 75%;
+    margin: 0 auto 30px;
+    justify-content: space-between; }
+    @media screen and (min-width: 500px) {
+      .footer .sns-icon {
+        width: 60%; } }
+    @media screen and (min-width: 600px) {
+      .footer .sns-icon {
+        width: 50%; } }
+    @media screen and (min-width: 1100px) {
+      .footer .sns-icon {
+        width: 40%; } }
+    .footer .sns-icon .facebook {
+      width: 57px;
+      height: 57px;
+      margin: 60px 0 0;
+      display: block; }
+      .footer .sns-icon .facebook .facebook-img {
+        background-image: url("img/facebook.png");
+        background-size: cover;
+        background-position: center;
+        width: 57px;
+        height: 57px; }
+    .footer .sns-icon .facebook,
+    .footer .sns-icon .twitter,
+    .footer .sns-icon .instagram {
+      width: 57px;
+      height: 57px;
+      margin: 60px 0 0;
+      display: block;
+      transition: 0.2s; }
+      .footer .sns-icon .facebook:hover,
+      .footer .sns-icon .twitter:hover,
+      .footer .sns-icon .instagram:hover {
+        opacity: 0.7;
+        transition: 0.2s; }
+      @media screen and (min-width: 500px) {
+        .footer .sns-icon .facebook,
+        .footer .sns-icon .twitter,
+        .footer .sns-icon .instagram {
+          width: 70px;
+          height: 70px;
+          margin: 100px 0 0; } }
+      @media screen and (min-width: 600px) {
+        .footer .sns-icon .facebook,
+        .footer .sns-icon .twitter,
+        .footer .sns-icon .instagram {
+          width: 80px;
+          height: 80px;
+          margin: 120px 0 0; } }
+      @media screen and (min-width: 1100px) {
+        .footer .sns-icon .facebook,
+        .footer .sns-icon .twitter,
+        .footer .sns-icon .instagram {
+          width: 100px;
+          height: 100px;
+          margin: 170px 0 0; } }
+    .footer .sns-icon .facebook .facebook-img {
+      background-image: url("img/facebook.png");
+      background-size: cover;
+      background-position: center;
+      width: 57px;
+      height: 57px; }
+      @media screen and (min-width: 500px) {
+        .footer .sns-icon .facebook .facebook-img {
+          width: 70px;
+          height: 70px; } }
+      @media screen and (min-width: 600px) {
+        .footer .sns-icon .facebook .facebook-img {
+          width: 80px;
+          height: 80px; } }
+      @media screen and (min-width: 1100px) {
+        .footer .sns-icon .facebook .facebook-img {
+          width: 100px;
+          height: 100px; } }
+    .footer .sns-icon .twitter .twitter-img {
+      background-image: url("img/twitter.png");
+      background-size: cover;
+      background-position: center;
+      width: 57px;
+      height: 57px; }
+      @media screen and (min-width: 500px) {
+        .footer .sns-icon .twitter .twitter-img {
+          width: 70px;
+          height: 70px; } }
+      @media screen and (min-width: 600px) {
+        .footer .sns-icon .twitter .twitter-img {
+          width: 80px;
+          height: 80px; } }
+      @media screen and (min-width: 1100px) {
+        .footer .sns-icon .twitter .twitter-img {
+          width: 100px;
+          height: 100px; } }
+    .footer .sns-icon .instagram .instagram-img {
+      background-image: url("img/insta.png");
+      background-size: cover;
+      background-position: center;
+      width: 57px;
+      height: 57px; }
+      @media screen and (min-width: 500px) {
+        .footer .sns-icon .instagram .instagram-img {
+          width: 70px;
+          height: 70px; } }
+      @media screen and (min-width: 600px) {
+        .footer .sns-icon .instagram .instagram-img {
+          width: 80px;
+          height: 80px; } }
+      @media screen and (min-width: 1100px) {
+        .footer .sns-icon .instagram .instagram-img {
+          width: 100px;
+          height: 100px; } }
+  .footer .HereIsMovie {
+    position: absolute;
+    width: 90%;
+    height: 60px;
+    display: block;
+    top: -30px;
+    left: 5%;
+    background-position: center;
+    background-size: cover;
+    transition: 0.2s; }
+    @media screen and (min-width: 500px) {
+      .footer .HereIsMovie {
+        width: 84%;
+        top: -50px;
+        left: 8%;
+        height: 100px; } }
+    @media screen and (min-width: 767px) {
+      .footer .HereIsMovie {
+        width: 76%;
+        left: 12%; } }
+    @media screen and (min-width: 834px) {
+      .footer .HereIsMovie {
+        top: -75px;
+        height: 150px; } }
+    @media screen and (min-width: 1500px) {
+      .footer .HereIsMovie {
+        width: 66%;
+        left: 17%; } }
+    .footer .HereIsMovie .MovieBack {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+    .footer .HereIsMovie p {
+      line-height: 60px;
+      font-size: 16px;
+      color: #fff;
+      text-align: center; }
+      @media screen and (min-width: 500px) {
+        .footer .HereIsMovie p {
+          line-height: 100px;
+          font-size: 18px; } }
+      @media screen and (min-width: 834px) {
+        .footer .HereIsMovie p {
+          font-size: 32px;
+          line-height: 150px; } }
+
+.wpcf7-mail-sent-ok,
+.wpcf7-mail-sent-ng,
+.wpcf7-spam-blocked,
+.wpcf7-validation-errors {
+  color: #ffffff;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  border: none; }
+
+/*# sourceMappingURL=web.css.map */

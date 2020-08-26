@@ -1,0 +1,1766 @@
+$Acol:#4a3a3a;
+$L-1:#fdfdfd;
+$L-2:#f4f4f4;
+$W:#ffffff;
+$B:#000000;
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+td{
+  font-family:sans-serif;
+  color:$Acol;
+}
+
+a{
+  cursor:pointer;
+}
+
+
+
+.breadcrumbs{
+  color:$W;
+  font-size:10px;
+  position:absolute;
+  top:131px;
+  right:5%;
+  @media screen and (min-width:768px){
+    top:185px;
+  }
+  @media screen and (min-width:1025px){
+    top:220px;
+    right:10%;
+  }
+  @media screen and (min-width:1500px){
+    top:220px;
+    right:15%;
+  }
+  a{
+    color:$W;
+  }
+}
+
+.menu{
+  width:60px;
+  height:60px;
+  background-color:$W;
+  top:21px;
+  right:5%;
+  z-index:101;
+  position:fixed;
+  @media screen and (min-width:768px){
+    top:45px;
+  }
+  @media screen and (min-width:1025px){
+    top:80px;
+    right:10%;
+  }
+  @media screen and (min-width:1500px){
+    top:80px;
+    right:15%;
+  }
+  .menu-button{
+    position:relative;
+    width:44px;
+    height:32px;
+    display:inline-block;
+    margin:13px 9px;
+    transition: all .4s;
+    box-sizing: border-box;
+    span{
+      position:absolute;
+      left:0;
+      width:100%;
+      height:2px;
+      background-color:$Acol;
+      transition: all .4s;
+      box-sizing: border-box;
+      display:inline-block;
+      &:nth-of-type(1) {
+        top: 0;
+      }
+      &:nth-of-type(2) {
+        top: 15px;
+      }
+      &:nth-of-type(3) {
+        bottom: 0;
+      }
+    }
+  }
+  .menu-button.active span:nth-of-type(1) {
+    -webkit-transform: translateY(15px) rotate(-315deg);
+    transform: translateY(15px) rotate(-315deg);
+  }
+  .menu-button.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu-button.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-15px) rotate(315deg);
+    transform: translateY(-15px) rotate(315deg);
+  }
+}
+
+.menu-after{
+  background-color:$B;
+  width:100vw;
+  height:100vh;
+  transition:0.4s;
+  position:fixed;
+  display:none;
+  z-index:100;
+  opacity:0.8;
+  top:0;
+  a{
+    text-align:center;
+    display:block;
+    font-size:16px;
+    color:$W;
+    margin:0 0 50px;
+    text-decoration: none;
+    &:nth-of-type(1) {
+      margin:20vh 0 50px 0;
+      @media screen and (min-width:768px){
+        margin:20vh 0 80px 0;
+      }
+      @media screen and (min-width:1025px){
+        margin:25vh 0 50px 0;
+      }
+    }
+    @media screen and (min-width:768px){
+        font-size:18px;
+        margin:0 0 80px;
+    }
+    @media screen and (min-width:1025px){
+        font-size:24px;
+        margin:0 0 50px;
+    }
+  }
+}
+
+
+
+@mixin underline($bottomMargin:30px,$width:100%,$color:$W){
+  background-color:$color;
+  width:$width;
+  height:1px;
+  margin:5px 0 $bottomMargin;
+  @media screen and (min-width:767px){
+    margin:0 0 45px;
+  }
+}
+
+@mixin h3($color:$W){
+  font-size:25px;
+  color:$color;
+  @media screen and (min-width:767px){
+      font-size:45px;
+  }
+}
+
+@mixin more_button{
+  width:140px;
+  height:34px;
+  border-radius:17px;
+  margin: 21px auto 0px;
+}
+
+
+// the CSS of movie top page is from here.
+
+
+.eyecatch{
+  width:100vw;
+  height:100vh;
+  background-position:center;
+  background-size:cover;
+  position:fixed;
+  top:0;
+  background-image:url("img/eyecatch-m.png");
+  z-index:-99;
+  @media screen and (min-width:850px){
+    background-image:url("img/eyecatch-l-m.png");
+  }
+}
+
+.title-m{
+  width:100%;
+  padding:50px 0;
+  background-color:$W;
+  margin:64vh 0 0;
+  @media screen and (min-width:350px){
+    width:90%;
+    margin:64vh auto 0;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+    margin:77vh auto 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1280px){
+    margin:60vh auto 0;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  h1{
+    font-size:85px;
+    text-align:center;
+    font-family: 'Poiret One',sans-serif;
+    font-weight:normal;
+    @media screen and (min-width:500px){
+      font-size:100px;
+    }
+    @media screen and (min-width:767px){
+      font-size:120px;
+    }
+    @media screen and (min-width:834px){
+      font-size:146px;
+    }
+    @media screen and (min-width:1100px){
+      font-size:174px;
+    }
+  }
+  h2{
+    text-align:center;
+    font-weight:lighter;
+    font-size:14px;
+    line-height:30px;
+    font-family: 'Noto Sans JP', sans-serif;
+    @media screen and (min-width:834px){
+      font-size:24px;
+    }
+  }
+}
+
+
+.whats{
+  width:100%;
+  padding:50px 0;
+  background-color:#3C0000;
+  @media screen and (min-width:350px){
+    width:90%;
+    margin:0 auto;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  .whats-container{
+    width:90%;
+    margin:0 auto;
+    @media screen and (min-width:1025px){
+      width:80%;
+    }
+    h3{
+      @include h3($color:$W);
+    }
+    .underline{
+      @include underline($color:$W);
+      @media screen and (min-width:767px){
+        margin:0 0 0px;
+      }
+    }
+    .what-display{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      .display{
+        width:48%;
+        margin-top:21px;
+        @media screen and (min-width:834px){
+          margin-top:45px;
+          width:24%;
+        }
+        @media screen and (min-width:1280px){
+          margin-top:65px;
+        }
+        .display-picture{
+          width:100%;
+          height:144px;
+          background-position:center;
+          background-size:cover;
+          @media screen and (min-width:414px){
+            height:160px;
+          }
+          @media screen and (min-width:500px){
+            height:200px;
+          }
+          @media screen and (min-width:650px){
+            height:270px;
+          }
+          @media screen and (min-width:834px){
+            height:154px;
+          }
+          @media screen and (min-width:1024px){
+            height:180px;
+          }
+          @media screen and (min-width:1280px){
+            height:230px;
+          }
+        }
+        .display1-picture{
+          background-image:url("img/d1.png");
+        }
+        .display2-picture{
+          background-image:url("img/d2.png");
+        }
+        .display3-picture{
+          background-image:url("img/d3.png");
+        }
+        .display4-picture{
+          background-image:url("img/d4.png");
+        }
+        .display5-picture{
+          background-image:url("img/d5.png");
+        }
+        .display6-picture{
+          background-image:url("img/d6.png");
+        }
+        .display7-picture{
+          background-image:url("img/d7.png");
+        }
+        .display8-picture{
+          background-image:url("img/d8.png");
+        }
+        p{
+          font-size:14px;
+          line-height:26px;
+          color:$W;
+          margin:8px 0 0 0;
+          @media screen and (min-width:834px){
+            margin:21px 0 0;
+            font-size:18px;
+            line-height:36px;
+          }
+          @media screen and (min-width:1280px){
+            margin:30px 0 0;
+            font-size:20px;
+            line-height:40px;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.why{
+  width:100%;
+  padding:50px 0;
+  background-color:$W;
+  @media screen and (min-width:350px){
+    width:90%;
+    margin:0 auto;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  .why-container{
+    width:90%;
+    margin:0 auto;
+    @media screen and (min-width:1025px){
+      width:80%;
+    }
+    h3{
+      @include h3($color:$Acol);
+    }
+    .underline{
+      @include underline($color:$Acol);
+      @media screen and (min-width:767px){
+        margin:0 0 0px;
+      }
+    }
+    .why-p{
+      font-size:16px;
+      margin:21px 0 0 0;
+      line-height:26px;
+      @media screen and (min-width:834px){
+        font-size:18px;
+        margin:45px 0 0 0;
+        line-height:36px;
+      }
+      @media screen and (min-width:1280px){
+        font-size:20px;
+        margin:65px 0 0 0;
+        line-height:40px;
+      }
+    }
+    table{
+      margin:45px 0 0;
+      width:100%;
+      @media screen and (min-width:1280px){
+        margin:65px 0 0;
+      }
+      .c1{
+        width:26.82%;
+        @media screen and (min-width:834px){
+          width:12%;
+        }
+        @media screen and (min-width:1280px){
+          width:8%;
+        }
+      }
+      .c2,
+      .c3{
+        width:36.59%;
+        @media screen and (min-width:834px){
+          width:44%;
+        }
+        @media screen and (min-width:1280px){
+          width:46%;
+        }
+      }
+      .c1r1,
+      .c1r3{
+        background-color:#FAFAFA;
+      }
+      .c1r2,
+      .c1r4{
+        background-color:#F4F4F4;
+      }
+      .c2r1,
+      .c2r3{
+        background-color:#FFF2F2;
+      }
+      .c2r2,
+      .c2r4{
+        background-color:#FFE3E3;
+      }
+      .c3r1,
+      .c3r3{
+        background-color:#F7F8FF;
+      }
+      .c3r2,
+      .c3r4{
+        background-color:#EBEEFF;
+      }
+      td{
+        padding:10px;
+        i{
+          font-size:50px;
+          display:block;
+          text-align:center;
+          line-height:80px;
+          @media screen and (min-width:834px){
+            font-size:80px;
+            line-height:100px;
+          }
+        }
+        .fa-circle{
+          color:#FF2F2F;
+        }
+        .fa-times{
+          color:#2C44FD;
+        }
+      }
+      .c3r1{
+        line-height:24px;
+      }
+      .c2r1,
+      .c3r1,
+      .c1r2,
+      .c1r3,
+      .c1r4{
+        text-align:center;
+          font-size:14px;
+          line-height:24px;
+          @media screen and (min-width:834px){
+            font-size:18px;
+            line-height:36px;
+          }
+          @media screen and (min-width:1280px){
+            font-size:20px;
+            line-height:40px;
+          }
+      }
+      .c2r2,
+      .c3r2,
+      .c2r3,
+      .c3r3,
+      .c2r4,
+      .c3r4{
+        p{
+          font-size:12px;
+          line-height:20px;
+          @media screen and (min-width:834px){
+            font-size:16px;
+            line-height:26px;
+          }
+          @media screen and (min-width:1280px){
+            font-size:18px;
+            line-height:36px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.works{
+  width:100%;
+  padding:50px 0;
+  background-color:#194800;
+  @media screen and (min-width:350px){
+    width:90%;
+    margin:0 auto;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  .works-container{
+    width:90%;
+    margin:0 auto;
+    @media screen and (min-width:1025px){
+      width:80%;
+    }
+    h3{
+      @include h3($color:$W);
+    }
+    .underline{
+      @include underline($color:$W);
+      @media screen and (min-width:1280px){
+        margin-bottom:65px;
+      }
+    }
+    h4{
+      font-size:18px;
+      color:$W;
+      font-weight:normal;
+      margin-bottom:10px;
+      @media screen and (min-width:834px){
+        margin-bottom:21px;
+        font-size:24px;
+      }
+      @media screen and (min-width:1280px){
+        margin-bottom:30px;
+        font-size:32px;
+      }
+    }
+    p{
+      font-size:12px;
+      line-height:20px;
+      color:$W;
+      @media screen and (min-width:834px){
+        line-height:26px;
+        font-size:14px;
+      }
+      @media screen and (min-width:1280px){
+        line-height:36px;
+        font-size:18px;
+      }
+    }
+    .work-container{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+      .work{
+        width:100%;
+        margin:21px 0 0 ;
+        @media screen and (min-width:834px){
+          margin:45px 0 0 ;
+          width:48%;
+        }
+        @media screen and (min-width:1280px){
+          margin:65px 0 0 ;
+        }
+        iframe{
+          width:100%;
+          margin:0 0 8px 0;
+          @media screen and (min-width:414px){
+            height:200px;
+          }
+          @media screen and (min-width:500px){
+            height:260px;
+          }
+          @media screen and (min-width:650px){
+            height:320px;
+          }
+          @media screen and (min-width:834px){
+            height:200px;
+            margin:0 0 21px 0;
+          }
+          @media screen and (min-width:1280px){
+            height:300px;
+            margin:0 0 30px 0;
+          }
+        }
+        p{
+          font-size:16px;
+          line-height:26px;
+          text-align:center;
+          @media screen and (min-width:834px){
+            font-size:18px;
+            line-height:36px;
+          }
+          @media screen and (min-width:1280px){
+            font-size:24px;
+            line-height:48px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.plan{
+  width:100%;
+  padding:50px 0;
+  background-color:$W;
+  @media screen and (min-width:350px){
+    width:90%;
+    margin:0 auto;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  .plan-container{
+    width:90%;
+    margin:0 auto;
+    @media screen and (min-width:1025px){
+      width:80%;
+    }
+    h3{
+      @include h3($color:$Acol);
+    }
+    .underline{
+      @include underline($color:$Acol);
+      @media screen and (min-width:1280px){
+        margin-bottom:65px;
+      }
+    }
+    p{
+      font-size:18px;
+      color:$Acol;
+      font-weight:normal;
+      margin-bottom:10px;
+      line-height:32px;
+      @media screen and (min-width:834px){
+        font-size:24px;
+      }
+      @media screen and (min-width:1280px){
+        font-size:32px;
+      }
+    }
+    .movie-price-all{
+      background-color:#FFF1E0;
+      width:100%;
+      height:62px;
+      margin:21px 0 0;
+      @media screen and (min-width:834px){
+        height:77px;
+        margin:45px 0 0;
+      }
+      @media screen and (min-width:1280px){
+        height:100px;
+        margin:65px 0 0;
+      }
+      p{
+        font-size:18px;
+        text-align:center;
+        line-height:62px;
+        @media screen and (min-width:834px){
+          line-height:77px;
+          font-size:24px;
+        }
+        @media screen and (min-width:1280px){
+          line-height:100px;
+          font-size:32px;
+        }
+      }
+    }
+    .equal{
+      background-image:url('img/equal.png');
+      background-size:cover;
+      background-position:center;
+      width:30px;
+      height:30px;
+      margin:16px auto;
+      @media screen and (min-width:834px){
+        width:50px;
+        height:50px;
+        margin:21px auto;
+      }
+      @media screen and (min-width:1280px){
+        width:70px;
+        height:70px;
+        margin:30px auto;
+      }
+    }
+    .movie-price-container{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+    }
+    .movie-price1{
+      background-color:#FFF4F9;
+    }
+    .movie-price2{
+      background-color:#FFFFF3;
+    }
+    .movie-price3{
+      background-color:#F3FFF3;
+    }
+    .movie-price4{
+      background-color:#F3FFFF;
+    }
+    .movie-price{
+      width:100%;
+      height:250px;
+      @media screen and (min-width:834px){
+        width:50%;
+        height:360px;
+
+      }
+      @media screen and (min-width:1280px){
+        height:450px;
+      }
+      .movie-price-title{
+        font-size:18px;
+        text-align:center;
+        padding:30px 0 0 ;
+        @media screen and (min-width:834px){
+          font-size:24px;
+        }
+        @media screen and (min-width:1280px){
+          font-size:32px;
+          padding:60px 0 0 ;
+        }
+      }
+      .movie-price-detail1{
+        font-size:16px;
+        margin:12px auto 0;
+        width:90%;
+        @media screen and (min-width:834px){
+          font-size:18px;
+          margin:45px auto 0;
+        }
+        @media screen and (min-width:1280px){
+          font-size:20px;
+          margin:65px auto 0;
+          width:80%;
+        }
+      }
+      .movie-price-detail2{
+        margin:12px auto 0;
+        width:90%;
+        font-size:14px;
+        line-height:26px;
+        @media screen and (min-width:834px){
+          font-size:18px;
+          margin:45px auto 0;
+          line-height:36px;
+        }
+        @media screen and (min-width:1280px){
+          font-size:20px;
+          margin:65px auto 0;
+          line-height:40px;
+          width:80%;
+        }
+      }
+    }
+    .more-button{
+      @include more_button;
+      background-color:#F8B869;
+      @media screen and (min-width:500px){
+        width:170px;
+        height:40px;
+        border-radius:20px;
+        margin: 40px auto 0;
+      }
+      @media screen and (min-width:767px){
+        width:200px;
+        height:50px;
+        border-radius:25px;
+        margin: 50px auto 0;
+      }
+      a{
+        display:block;
+        line-height:34px;
+        text-align:center;
+        text-decoration: none;
+        color:$W;
+        @media screen and (min-width:500px){
+          line-height:40px;
+          font-size:18px;
+        }
+        @media screen and (min-width:767px){
+          line-height:50px;
+          font-size:20px;
+        }
+      }
+    }
+  }
+}
+
+.order-flow{
+  width:100%;
+  background-color:#380000;
+  padding:50px 0;
+  @media screen and (min-width:350px){
+    width:90%;
+    margin:0 auto;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  .order-flow-container{
+    width:90%;
+    margin:0 auto;
+    @media screen and (min-width:1025px){
+      width:80%;
+    }
+    h3{
+      font-size:25px;
+      color:$W;
+      @media screen and (min-width:767px){
+          font-size:45px;
+      }
+    }
+    .underline{
+      @include underline($color:$W);
+      @media screen and (min-width:1280px){
+        margin:0px 0 65px;
+      }
+    }
+    i{
+      font-size:40px;
+      color:$W;
+      margin: 0 auto;
+    }
+    .under-go{
+      width:0px;
+      margin:10px auto;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 10px solid $W;
+    }
+    .process{
+      width:100%;
+      height:80px;
+      background-color:$W;
+      @media screen and (min-width:834px){
+        height:120px;
+      }
+      p{
+        text-align:center;
+        font-size:18px;
+        line-height:80px;
+        &:nth-of-type(2){
+          text-align:center;
+          font-size:12px;
+          padding:0;
+          width:90%;
+          margin:10px auto 0;
+          @media screen and (min-width:834px){
+            font-size:16px;
+          }
+        }
+        @media screen and (min-width:600px){
+          font-size:20px;
+        }
+        @media screen and (min-width:834px){
+          font-size:28px;
+          padding:32px 0 0;
+        }
+        @media screen and (min-width:1280px){
+          font-size:32px;
+        }
+      }
+    }
+    .processA{
+      p{
+        line-height:80px;
+        padding:0;
+        @media screen and (min-width:834px){
+          line-height:120px;
+        }
+      }
+    }
+  }
+
+  .more-button{
+    @include more_button;
+    background-color:#F8B869;
+    @media screen and (min-width:500px){
+      width:170px;
+      height:40px;
+      border-radius:20px;
+      margin: 40px auto 0;
+    }
+    @media screen and (min-width:767px){
+      width:200px;
+      height:50px;
+      border-radius:25px;
+      margin: 50px auto 0;
+    }
+    a{
+      display:block;
+      line-height:34px;
+      text-align:center;
+      text-decoration: none;
+      color:$W;
+      @media screen and (min-width:500px){
+        line-height:40px;
+        font-size:18px;
+      }
+      @media screen and (min-width:767px){
+        line-height:50px;
+        font-size:20px;
+      }
+    }
+
+  }
+}
+
+.contact{
+  width:100%;
+  background-color:#003C09;
+  padding:50px 0;
+
+  @media screen and (min-width:350px){
+    width:90%;
+    margin: 0px auto 0;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  .contact-container{
+    width:90%;
+    margin:0 auto;
+    @media screen and (min-width:1025px){
+      width:80%;
+    }
+    h3{
+      font-size:25px;
+      color:$W;
+      @media screen and (min-width:767px){
+          font-size:45px;
+      }
+    }
+    .underline{
+      @include underline($color:$W);
+      @media screen and (min-width:1280px){
+        margin:5px 0 64px;
+      }
+    }
+    p{
+      color:$W;
+      line-height:26px;
+      @media screen and (min-width:500px){
+        line-height:30px;
+      }
+    }
+    .contact-p-1,
+    .contact-p-3{
+      font-size:18px;
+      @media screen and (min-width:500px){
+        font-size:20px;
+      }
+      @media screen and (min-width:834px){
+        font-size:24px;
+        line-height:40px;
+      }
+      @media screen and (min-width:1280px){
+        line-height:60px;
+        font-size:32px;
+      }
+    }
+    .contact-p-2,
+    .contact-p-4,
+    .contact-p-5,
+    .contact-p-6,
+    .contact-p-7{
+      font-size:14px;
+      @media screen and (min-width:500px){
+        font-size:16px;
+      }
+      @media screen and (min-width:834px){
+        font-size:20px;
+        line-height:40px;
+      }
+    }
+    .contact-p-5,
+    .contact-p-6,
+    .contact-p-7{
+      @media screen and (min-width:1280px){
+        font-size:24px;
+      }
+    }
+    .contact-p-1{
+      margin:0 0 15px 0;
+    }
+    .contact-p-2{
+      margin:0 0 25px 0;
+    }
+    .line-add,
+    .mail-send{
+      width:100%;
+      height:50px;
+      cursor:pointer;
+      @media screen and (min-width:800px){
+        width:48%;
+      }
+      p{
+        font-size:16px;
+        line-height:50px;
+        text-align:center;
+        @media screen and (min-width:500px){
+          font-size:20px;
+        }
+        @media screen and (min-width:800px){
+          font-size:16px;
+        }
+        @media screen and (min-width:1280px){
+          font-size:20px;
+        }
+      }
+      a{
+        font-size:16px;
+        line-height:50px;
+        text-align:center;
+        color:$W;
+        display:block;
+        text-decoration:none;
+        @media screen and (min-width:500px){
+          font-size:20px;
+        }
+        @media screen and (min-width:800px){
+          font-size:16px;
+        }
+        @media screen and (min-width:1280px){
+          font-size:20px;
+        }
+      }
+    }
+    .line-add{
+      background-color:#04C300;
+      margin: 0 0 15px 0;
+    }
+    .mail-send{
+      background-color:#66CCFF;
+      margin: 0 0 35px 0;
+    }
+    @media screen and (min-width:800px){
+      .contact-add{
+        display:flex;
+        justify-content: space-between;
+      }
+    }
+    .contact-p-3{
+      margin:0 0 15px 0;
+    }
+    .contact-p-4{
+      margin:0 0 25px 0;
+    }
+    textarea{
+      width:100%;
+    }
+    .send-button{
+      width:100px;
+      height:30px;
+      border:1px $W solid;
+      border-radius:15px;
+      margin: 20px 0 0 auto;
+      background-color:$W;
+      transition:0.2s;
+      a{
+        font-family: 'Noto Serif JP', serif;
+        color:$Acol;
+        display:block;
+        line-height:30px;
+        text-align:center;
+        text-decoration: none;
+        @media screen and (min-width:500px){
+          font-size:20px;
+        }
+      }
+      @media screen and (min-width:834px){
+        width:140px;
+        height:40px;
+        border-radius:20px;
+        // a{
+          font-size:24px;
+          line-height:40px;
+        // }
+      }
+    }
+    .send-button:hover{
+      transition:0.2s;
+      opacity:0.7;
+    }
+  }
+}
+
+.footer{
+  width:100%;
+  padding:50px 0 8px;
+  background-color:$W;
+  @media screen and (min-width:350px){
+    margin:50px 0 0;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  .HereIsHomepage{
+    width:90%;
+    height:60px;
+    @media screen and (min-width:1025px){
+      width:80%;
+    }
+    @media screen and (min-width:834px){
+      height:100px;
+    }
+    @media screen and (min-width:1280px){
+      height:140px;
+    }
+    .HomepageBack{
+      width:90%;
+      height:60px;
+      margin:0 auto;
+      background-image:url('img/homepage.jpg');
+      background-size:cover;
+      background-position:center;
+      @media screen and (min-width:834px){
+        height:100px;
+      }
+      @media screen and (min-width:1025px){
+        width:80%;
+      }
+      @media screen and (min-width:1280px){
+        height:140px;
+      }
+      @media screen and (min-width:1500px){
+        width:70%;
+      }
+      p{
+        text-align:center;
+        font-size:14px;
+        color:$W;
+        line-height:60px;
+        margin-top:0;
+        @media screen and (min-width:834px){
+          line-height:100px;
+          font-size:24px;
+        }
+        @media screen and (min-width:1280px){
+          line-height:140px;
+          font-size:32px;
+        }
+      }
+    }
+  }
+  p{
+    font-size:8px;
+    width:90%;
+    margin:21px auto 0;
+    text-align:center;
+  }
+}
+
+// The end of movie top page CSS.
+
+// the CSS of movie orderflow page is from here.
+
+.eyecatch{
+  h1{
+    font-size:29px;
+    position:absolute;
+    top:20px;
+    left:5%;
+    color:$W;
+    position:fixed;
+    z-index:-97;
+    @media screen and (min-width:360px){
+        font-size:36px;
+    }
+    @media screen and (min-width:768px){
+        font-size:45px;
+        top:50px;
+    }
+    @media screen and (min-width:1025px){
+        left:10%;
+        top:80px;
+    }
+    @media screen and (min-width:1500px){
+        left:15%;
+    }
+  }
+}
+
+.orderflow-m{
+  background-color:$W;
+  width:100%;
+  margin:64vh 0 0;
+  padding:50px 0;
+  @media screen and (min-width:350px){
+    width:90%;
+    margin:64vh auto 0;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+    margin:77vh auto 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1280px){
+    margin:60vh auto 0;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  .orderflow-m-container{
+    width:90%;
+    margin:0 auto;
+    @media screen and (min-width:768px){
+      padding:0px 5%;
+    }
+    @media screen and (min-width:1025px){
+      padding:0px 10%;
+      width:80%;
+    }
+    p{
+      font-size:16px;
+      line-height:26px;
+      @media screen and (min-width:768px){
+        font-size:20px;
+        line-height:35px;
+      }
+    }
+    .stprA{
+      font-size:16px;
+      line-height:26px;
+      @media screen and (min-width:768px){
+        font-size:24px;
+        line-height:40px;
+      }
+    }
+    .stprC{
+      font-size:16px;
+      line-height:30px;
+      margin:21px 0;
+      @media screen and (min-width:768px){
+        font-size:24px;
+        line-height:40px;
+        margin:45px 0;
+      }
+    }
+    .attention-m{
+      font-size:14px;
+      line-height:24px;
+      @media screen and (min-width:768px){
+        font-size:16px;
+        line-height:26px;
+      }
+    }
+    .under-go{
+      width:0px;
+      margin:10px auto;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 10px solid #ff8c00;
+    }
+    .process{
+      width:100%;
+      height:140px;
+      background-color:#FFF1E0;
+      @media screen and (min-width:414px){
+        height:150px;
+      }
+      @media screen and (min-width:1280px){
+        height:190px;
+      }
+      .process-p1{
+        text-align:center;
+        font-size:18px;
+        line-height:30px;
+        padding:21px 0 0;
+        @media screen and (min-width:768px){
+          font-size:24px;
+          line-height:48px;
+        }
+      }
+      .process-p2{
+        font-size:14px;
+        line-height:24px;
+        width:90%;
+        margin:8px auto;
+        @media screen and (min-width:768px){
+          font-size:16px;
+          line-height:26px;
+          margin:15px auto;
+        }
+      }
+    }
+    h2{
+      font-size:18px;
+      text-align:center;
+      line-height:30px;
+      margin:21px 0;
+      @media screen and (min-width:768px){
+        font-size:24px;
+        line-height:48px;
+        margin:45px 0;
+      }
+    }
+    textarea{
+      width:80%;
+    }
+    .send-button{
+      width:100px;
+      height:30px;
+      border:1px $Acol solid;
+      border-radius:15px;
+      margin: 10px 0;
+      background-color:$W;
+      transition:0.2s;
+      // a{
+        font-family: sans-serif;
+        color:$Acol;
+        display:block;
+        line-height:30px;
+        text-align:center;
+        text-decoration: none;
+        @media screen and (min-width:500px){
+          font-size:20px;
+        }
+      // }
+      @media screen and (min-width:834px){
+        width:140px;
+        height:40px;
+        border-radius:20px;
+        // a{
+          font-size:24px;
+          line-height:40px;
+        // }
+      }
+    }
+    .send-button:hover{
+      transition:0.2s;
+      opacity:0.7;
+    }
+    .wpcf7-mail-sent-ok,
+    .wpcf7-mail-sent-ng,
+    .wpcf7-spam-blocked,
+    .wpcf7-validation-errors {
+    color:red;
+    font-family: 'Noto Serif JP', serif;
+    font-size:20px;
+    border:none;
+    }
+      .more-button{
+        @include more_button;
+        background-color:#F8B869;
+        width:170px;
+        margin: 40px auto 0;
+        @media screen and (min-width:500px){
+          width:200px;
+          height:40px;
+          border-radius:20px;
+          margin: 40px auto 0;
+        }
+        @media screen and (min-width:768px){
+          width:240px;
+          height:50px;
+          border-radius:25px;
+          margin: 50px auto 0;
+        }
+        a{
+          display:block;
+          line-height:34px;
+          text-align:center;
+          text-decoration: none;
+          color:$W;
+          @media screen and (min-width:500px){
+            line-height:40px;
+            font-size:18px;
+          }
+          @media screen and (min-width:767px){
+            line-height:50px;
+            font-size:20px;
+          }
+        }
+      }
+  }
+}
+
+// The end of movie orderflow page CSS.
+
+// the CSS of movie plan page is from here.
+
+.plan-m{
+  background-color:$W;
+  width:100%;
+  margin:64vh 0 0;
+  padding:50px 0;
+  @media screen and (min-width:350px){
+    width:90%;
+    margin:64vh auto 0;
+  }
+  @media screen and (min-width:768px){
+    padding:80px 0;
+  }
+  @media screen and (min-width:1025px){
+    width:80%;
+  }
+  @media screen and (min-width:1500px){
+    width:70%;
+  }
+  .plan-m-container{
+    width:90%;
+    margin:0 auto;
+    @media screen and (min-width:1025px){
+      width:80%;
+    }
+    .plan-eyecatch{
+      background-image:url('img/corporate.jpg');
+      width:100%;
+      height:200px;
+      background-size:cover;
+      background-position:center;
+      @media screen and (min-width:680px){
+        height:300px;
+      }
+      @media screen and (min-width:768px){
+        height:400px;
+      }
+    }
+    .plan-intro1{
+      font-size:18px;
+      margin:21px auto;
+      line-height:36px;
+      color:$Acol;
+      @media screen and (min-width:768px){
+        margin:45px auto 21px;
+        font-size:24px;
+      }
+    }
+    .plan-intro2{
+      font-size:14px;
+      margin:0 auto;
+      line-height:26px;
+      @media screen and (min-width:768px){
+        font-size:18px;
+        line-height:36px;
+      }
+    }
+    h2{
+      text-align:center;
+      margin:21px 0;
+      font-size:18px;
+      @media screen and (min-width:768px){
+        margin:45px 0;
+        font-size:24px;
+      }
+    }
+    .plan1,
+    .plan2,
+    .plan3,
+    .plan4{
+      padding:21px 5%;
+      margin:50px 0 0;
+      @media screen and (min-width:768px){
+        padding:45px 5%;
+        margin:80px 0 0;
+      }
+      h3{
+        text-align:center;
+        margin:0 0 21px;
+        font-size:18px;
+        font-weight:normal;
+        @media screen and (min-width:768px){
+          font-size:24px;
+          margin:0 0 45px;
+
+        }
+      }
+      .plan-p1,
+      .plan-p2{
+        font-size:14px;
+        line-height:24px;
+        @media screen and (min-width:768px){
+          font-size:18px;
+          line-height:36px;
+        }
+      }
+      .plan-p1{
+        margin:0 0 21px;
+        @media screen and (min-width:768px){
+          margin:0 0 45px;
+        }
+      }
+    }
+    .plan1{
+      background-color:#FFF4F9;
+      margin:21px 0 0;
+      @media screen and (min-width:768px){
+        margin:45px 0 0;
+      }
+    }
+    .plan-kind-container{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+    }
+    .plan-kind{
+      margin:21px 0;
+      width:100%;
+      @media screen and (min-width:768px){
+        margin:45px 0;
+        width:48%;
+      }
+      .plan-pic{
+        width:100%;
+        height:300px;
+        background-position:center;
+        background-size:cover;
+        margin:0 0 21px;
+        @media screen and (min-width:680px){
+          height:380px;
+        }
+        @media screen and (min-width:768px){
+          margin:0 0 45px;
+          height:300px;
+        }
+      }
+      h4{
+        text-align:center;
+        margin:0 0 21px;
+        font-size:18px;
+        font-weight:normal;
+        @media screen and (min-width:768px){
+          font-size:24px;
+          margin:0 0 45px;
+
+        }
+        @media screen and (min-width:1280px){
+          font-size:32px;
+        }
+      }
+      .plan-desc1{
+        font-size:16px;
+        line-height:26px;
+        margin:0 0 21px;
+        @media screen and (min-width:768px){
+          font-size:18px;
+          line-height:36px;
+          margin:0 0 45px;
+        }
+      }
+      .plan-desc2{
+        font-size:14px;
+        line-height:26px;
+        @media screen and (min-width:768px){
+          font-size:16px;
+          line-height:26px;
+        }
+      }
+    }
+    .plan1-basic-pic{
+      background-image:url("img/plan1-basic.png");
+    }
+    .plan1-sta-pic{
+      background-image:url("img/plan1-sta.png");
+    }
+    .plan1-pre-pic{
+      background-image:url("img/plan1-pre.png");
+    }
+    .plan2-basic-pic{
+      background-image:url("img/plan2-basic.png");
+    }
+    .plan2-sta-pic{
+      background-image:url("img/plan2-sta.png");
+    }
+    .plan2-pre-pic{
+      background-image:url("img/plan2-pre.png");
+    }
+    .plan3-basic-pic{
+      background-image:url("img/plan3-basic.png");
+    }
+    .plan3-sta-pic{
+      background-image:url("img/plan3-sta.png");
+    }
+    .plan3-pre-pic{
+      background-image:url("img/plan3-pre.png");
+    }
+    .plan3-gold-pic{
+      background-image:url("img/plan3-gold.png");
+    }
+    .plan3-other-pic{
+      background-image:url("img/plan3-other.png");
+    }
+    .plan2{
+      background-color:#FFFFF3;
+    }
+    .plan3{
+      background-color:#F3FFF3;
+    }
+    .plan4{
+      background-color:#F3FFFF;
+    }
+    .plan-foot-p{
+      font-size:18px;
+      line-height:30px;
+      margin:21px 0 ;
+      @media screen and (min-width:768px){
+        font-size:24px;
+        margin:45px 0 ;
+
+      }
+      @media screen and (min-width:1280px){
+        margin:65px 0 ;
+      }
+
+    }
+    .plan-attention{
+      font-size:12px;
+      line-height:20px;
+      @media screen and (min-width:768px){
+        font-size:16px;
+        line-height:26px;
+      }
+    }
+    .more-button{
+      @include more_button;
+      background-color:#F8B869;
+      width:170px;
+      @media screen and (min-width:500px){
+        width:200px;
+        height:40px;
+        border-radius:20px;
+        margin: 40px auto 0;
+      }
+      @media screen and (min-width:768px){
+        width:240px;
+        height:50px;
+        border-radius:25px;
+        margin: 50px auto 0;
+      }
+      a{
+        display:block;
+        line-height:34px;
+        text-align:center;
+        text-decoration: none;
+        color:$W;
+        @media screen and (min-width:500px){
+          line-height:40px;
+          font-size:18px;
+        }
+        @media screen and (min-width:768px){
+          line-height:50px;
+          font-size:20px;
+        }
+      }
+    }
+    .plan4-container{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+      .plan4-each{
+        width:48%;
+        margin:21px 0 0;
+        @media screen and (min-width:834px){
+          margin:45px 0 0;
+          width:32%;
+        }
+        .plan4-pic{
+          width:100%;
+          height:150px;
+          background-size:cover;
+          background-position:center;
+          @media screen and (min-width:680px){
+            height:200px;
+          }
+          @media screen and (min-width:768px){
+            height:250px;
+          }
+        }
+        .plan4-1-pic{
+          background-image:url("img/plan4-1.png");
+        }
+        .plan4-2-pic{
+          background-image:url("img/plan4-2.png");
+        }
+        .plan4-3-pic{
+          background-image:url("img/plan4-3.png");
+        }
+        .plan4-4-pic{
+          background-image:url("img/plan4-4.png");
+        }
+        .plan4-5-pic{
+          background-image:url("img/plan4-5.png");
+        }
+        .plan4-6-pic{
+          background-image:url("img/plan4-6.png");
+        }
+        h4{
+          font-size:18px;
+          line-height:30px;
+          height:60px;
+          margin:21px 0 0;
+          font-weight:normal;
+          @media screen and (min-width:425px){
+            height:48px;
+          }
+          @media screen and (min-width:768px){
+            font-size:22px;
+            line-height:44px;
+            height:48px;
+          }
+        }
+        p{
+          font-size:12px;
+          line-height:20px;
+          height:100px;
+          @media screen and (min-width:768px){
+            font-size:16px;
+            line-height:26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// The end of movie plan page CSS.
