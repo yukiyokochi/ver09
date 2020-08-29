@@ -1,5 +1,6 @@
 <?php get_header(); ?>
   <body>
+    <p class="gittest">GIT TEST COMPLETED</p>
     <div class="menu-after">
       <ul>
         <a href="https://ver-nine.com/services">Services</a>
