@@ -67,12 +67,11 @@
                 </div>
               </div>
               <div class="school-each">
-                <p class="service-fact-subtitle">プログラミングスクール</p>
-                <p class="service-fact-text">将来、<br>IT人材は世界中で圧倒的に不足し<br>需要はどんどん高まっていきます。<br>プログラミング教育を通して<br>一生を生き抜くスキルの提供をしております。</p>
+                <p class="service-fact-subtitle">マーケティングスクール</p>
+                <p class="service-fact-text">将来、IT人材は世界中で圧倒的に不足し需要は高まります。<br>マーケティング教育を通して、一生を生き抜くスキルの提供をしております。</p>
                 <div class="button">
                   <a href="https://zero-plus.io/" target="_blank" class="button-text">専用ページへ</a>
                 </div>
-                <p class="button-attention">※外部サイトへ移動します</p>
               </div>
             </div>
           </div>
@@ -83,9 +82,8 @@
               <p>コンサル事業</p>
             </div>
           </div>
-          <div class="uncoming-service-filter"></div>
-          <div class="coming-soon">
-            <p>coming soon</p>
+          <div class="service-fact-bg">
+            <p class="service-fact-text">Web制作・開発や動画制作をご検討の際の売上・集客の向上に基づく制作コンテンツの無料相談のほか、<br>お客様の目的や生活スタイルに合ったプログラミングスクールの紹介をしております。</p>
           </div>
         </div>
         <div class="service-fact">

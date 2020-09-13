@@ -9,9 +9,7 @@
       <a href="https://ver-nine.com/services/web" class="layer2">-　Web制作事業</a>
       <a href="https://ver-nine.com/services/movie" class="layer2">-　動画制作事業</a>
       <a href="https://ver-nine.com/services/mov" class="layer2">-　動画スクール</a>
-      <a href="https://zero-plus.io/"  target="_blank" class="layer2">-　プログラミングスクール</a>
-      <a href="#" class="layer2 uncoming">-　コンサル事業</a>
-      <a href="#" class="layer2 uncoming">-　自社開発事業</a>
+      <a href="#" class="layer2 uncoming">-　マーケティングスクール</a>
       <a href="https://ver-nine.com/vision">-　会社理念</a>
       <a href="https://ver-nine.com/member">-　メンバー紹介</a>
       <a href="https://ver-nine.com/blog">-　ブログ</a>
