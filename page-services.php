@@ -57,7 +57,7 @@
             </div>
           </div>
           <div class="service-fact-bg">
-            <p class="service-fact-text">終身雇用の時代が終わった今<br>自身の能力でお金を生み出すスキルの教育によって<br>個人の持つ可能性を拡げます。<br>弊社では特に<br>動画編集スクール・プログラミングスクールに力を入れています。</p>
+            <p class="service-fact-text">終身雇用の時代が終わった今<br>自身の能力でお金を生み出すスキルの教育によって<br>個人の持つ可能性を拡げます。<br>弊社では特に<br>動画編集スクール・マーケティングスクールに力を入れています。</p>
             <div class="for-flex">
               <div class="school-each">
                 <p class="service-fact-subtitle">動画編集スクール</p>
@@ -70,7 +70,7 @@
                 <p class="service-fact-subtitle">マーケティングスクール</p>
                 <p class="service-fact-text">将来、IT人材は世界中で圧倒的に不足し需要は高まります。<br>マーケティング教育を通して、一生を生き抜くスキルの提供をしております。</p>
                 <div class="button">
-                  <a href="https://zero-plus.io/" target="_blank" class="button-text">専用ページへ</a>
+                  <a href="#" target="_blank" class="button-text">専用ページへ</a>
                 </div>
               </div>
             </div>
